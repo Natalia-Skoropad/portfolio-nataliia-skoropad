@@ -1,0 +1,61 @@
+/* === Base / Mobile  ===================================== */
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  gap: 40px;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+
+.link:hover,
+.link:focus-visible,
+.active {
+  color: var(--accent);
+  text-shadow: var(--shadow-2);
+}
+
+/* === Tablet =========================================== */
+
+@media (min-width: 720px) {
+  .link {
+    font-size: 16px;
+  }
+
+  .inline {
+    gap: 25px;
+  }
+
+  .inline > li > a {
+    padding-block: 10px;
+  }
+}
+
+/* === Desktop ========================================= */
+
+@media (min-width: 1320px) {
+  .inline {
+    gap: 50px;
+  }
+
+  .inline > li > a {
+    padding-block: 20px;
+  }
+}

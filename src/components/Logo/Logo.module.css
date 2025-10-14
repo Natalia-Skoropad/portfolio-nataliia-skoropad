@@ -1,0 +1,16 @@
+.logo {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 40px;
+  text-transform: capitalize;
+  color: #d0cec1;
+
+  flex: 0 0 auto;
+  color: var(--accent);
+  cursor: pointer;
+}

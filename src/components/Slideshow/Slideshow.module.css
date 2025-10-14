@@ -1,0 +1,106 @@
+/* Обгортка всього блоку (текст зверху + картка) */
+.wrap {
+  width: 306px; /* щоби все тримало розмір */
+}
+
+/* Текст “Projects”/“Tools” над контейнером */
+.labelWrap {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 231px;
+  padding-top: 80px;
+}
+
+/* додай */
+.labelWrapRight {
+  padding-top: 315px;
+  padding-left: 231px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #6c63ff;
+}
+
+/* === Контейнер 306×246 === */
+.card {
+  width: 306px;
+  height: 246px;
+  border-radius: 20px;
+  background: rgba(108, 99, 255, 0.05);
+  padding: 10px 10px 15px; /* L/R/T=10, Bottom=15 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Відступ між фото і нижньою панеллю 15px */
+.imageFrame {
+  width: 286px;
+  height: 186px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 286px;
+  height: 186px;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px; /* можна змінити, якщо не потрібно заокруглення */
+}
+
+/* Нижня панель: висота 20px, фон як у ТЗ */
+.bottom {
+  margin-top: 15px;
+  height: 20px;
+
+  padding: 0 20px; /* L/R = 20px */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* загальний проміжок між елементами */
+  border-radius: 10px; /* легке скруглення, можна прибрати */
+}
+
+/* Група крапок з відступом 15px між ними */
+.dots {
+  display: flex;
+  gap: 15px;
+}
+
+/* Кнопки-крапки 20×20, коло */
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  border: none;
+  background: #cbaf87;
+  flex: 0 0 auto;
+}
+
+/* Активна крапка — сяйво */
+.active {
+  box-shadow: 0 0 4px 2px rgba(203, 175, 135, 0.5);
+}
+
+/* Назва проєкту */
+.caption {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #cbaf87;
+  line-height: 1; /* щоб вмістилось у 20px висоти панелі */
+}
+
+/* варіанти позиціювання */
+.project .caption {
+  margin-left: auto;
+} /* крапки ліворуч, назва праворуч */
+.tools .dots {
+  margin-left: auto;
+} /* назва ліворуч, крапки праворуч */

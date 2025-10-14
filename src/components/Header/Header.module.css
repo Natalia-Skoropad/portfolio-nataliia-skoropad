@@ -1,0 +1,136 @@
+/* ===== Base (mobile-first) ===================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 42;
+  padding-top: 20px;
+  background: var(--bg);
+  backdrop-filter: blur(6px);
+}
+
+.inner {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  color: --accent;
+}
+
+.menuBtn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.iconSquare {
+  width: 40px;
+  height: 40px;
+
+  transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.iconSquare:hover,
+.iconSquare:focus-visible {
+  box-shadow: var(--shadow-1);
+  outline: none;
+}
+
+.navInline {
+  display: none;
+}
+
+.hireBtn {
+  display: none;
+}
+
+.offTop {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 135px;
+}
+
+.offNav {
+  margin-bottom: 135px;
+}
+
+.bottom {
+  margin-top: auto;
+}
+
+/* ===== Tablet ========================================= */
+
+@media (min-width: 720px) {
+  .inner {
+    justify-content: flex-start;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+
+  .brand {
+    margin-right: 96px;
+  }
+
+  .navInline {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+  }
+
+  .hireBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 158px;
+    height: 40px;
+    border-radius: 20px;
+
+    background: var(--accent);
+    color: var(--text);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: capitalize;
+
+    border: none;
+    cursor: pointer;
+
+    transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hireBtn:hover,
+  .hireBtn:focus {
+    box-shadow: var(--shadow-2);
+  }
+}
+
+/* ===== Desktop ====================================== */
+
+@media (min-width: 1320px) {
+  .brand {
+    margin-right: 354px;
+  }
+
+  .navInline {
+    margin-right: 244px;
+  }
+
+  .hireBtn {
+    width: 196px;
+    height: 40px;
+    border-radius: 20px;
+  }
+}
