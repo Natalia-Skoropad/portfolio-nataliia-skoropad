@@ -1,7 +1,11 @@
-import { Button } from '../../index';
-import Slideshow, { type Slide } from '../Slideshow/Slideshow';
+import { Button, Slideshow } from '../../index';
+
+import type { Slide } from '../../types/slide';
 import { scrollToId } from '../../hooks/scrollToId';
+
 import css from './Hero.module.css';
+
+// ================================================================
 
 const projects: Slide[] = [
   {
@@ -45,7 +49,9 @@ const tools: Slide[] = [
   },
 ];
 
-export default function Hero() {
+// ================================================================
+
+function Hero() {
   return (
     <section id="about" className={css.hero}>
       <div className="container">
@@ -67,7 +73,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* CTA тільки для мобільного */}
             <div className={css.ctaMobile}>
               <Button
                 text="Hire Me"
@@ -87,3 +92,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;

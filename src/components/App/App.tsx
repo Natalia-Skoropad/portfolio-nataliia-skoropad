@@ -1,5 +1,7 @@
-import { Header, Hero } from '../../index';
+import { Header, Hero, Timeline } from '../../index';
 import css from './App.module.css';
+
+import { TIMELINE } from '../../data/timeline';
 
 // ================================================================
 
@@ -10,14 +12,8 @@ function App() {
 
       <main>
         <Hero />
+        <Timeline items={TIMELINE} />
 
-        <section
-          id="timeline"
-          className="container"
-          style={{ paddingBlock: '24px' }}
-        >
-          {/* My IT Career Path */}
-        </section>
         <section
           id="works"
           className="container"
@@ -43,5 +39,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
