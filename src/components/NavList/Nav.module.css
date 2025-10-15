@@ -29,7 +29,7 @@
 .link:focus-visible,
 .active {
   color: var(--accent);
-  text-shadow: var(--shadow-2);
+  text-shadow: 0 0 50px rgba(108, 99, 255, 0.8);
 }
 
 /* === Tablet =========================================== */

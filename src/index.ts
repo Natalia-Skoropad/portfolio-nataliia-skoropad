@@ -9,3 +9,5 @@ export { default as Logo } from './components/Logo/Logo';
 export { default as Hero } from './components/Hero/Hero';
 export { default as Slideshow } from './components/Slideshow/Slideshow';
 export { default as Timeline } from './components/Timeline/Timeline';
+
+export { default as Works } from './components/Works/Works';

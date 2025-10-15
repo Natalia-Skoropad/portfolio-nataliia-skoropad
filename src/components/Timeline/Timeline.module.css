@@ -4,6 +4,10 @@
   padding-block: 32px;
 }
 
+:global(#works) {
+  padding-top: 200px;
+}
+
 .header {
   margin-bottom: 30px;
 }

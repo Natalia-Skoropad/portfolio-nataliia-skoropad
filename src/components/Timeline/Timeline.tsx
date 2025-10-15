@@ -46,13 +46,13 @@ function Timeline({ items, idAttr = 'timeline' }: Props) {
 
       <Rail
         mode="tablet"
-        height={1250}
+        height={1210}
         positions={[465, 270, 855, 660, 1245, 1050]}
       />
 
       <Rail
         mode="desktop"
-        height={1150}
+        height={1100}
         positions={[192, 345, 498, 649, 801, 954]}
       />
     </section>

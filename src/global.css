@@ -30,6 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 80px;
+}
+
 .container {
   max-width: 320px;
   padding: 0 8px;

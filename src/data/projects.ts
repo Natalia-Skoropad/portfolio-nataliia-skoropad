@@ -1,0 +1,66 @@
+import type { Project } from '../types/project';
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'artistshub',
+    title: 'ArtistsHub',
+    image: '/images/work/artistshub-mobile.jpg',
+    image2x: '/images/work/artistshub-mobile@2x.jpg',
+    imageTab: '/images/work/artistshub-tab.jpg',
+    imageTab2x: '/images/work/artistshub-tab@2x.jpg',
+    imageDesk: '/images/work/artistshub-desk.jpg',
+    imageDesk2x: '/images/work/artistshub-desk@2x.jpg',
+    alt: 'ArtistsHub landing',
+    href: 'https://example.com/artistshub',
+    categories: ['frontend'],
+    group: true,
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Vite', iconId: 'icon-vite-logo-gold' },
+      { label: 'Axios', iconId: 'icon-axios-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
+  // ... yogabloom, webstudio — аналогічно
+  {
+    id: 'yogabloom',
+    title: 'YogaBloom',
+    image: '/images/work/yogabloom-mobile.jpg',
+    image2x: '/images/work/yogabloom-mobile@2x.jpg',
+    imageTab: '/images/work/yogabloom-tab.jpg',
+    imageTab2x: '/images/work/yogabloom-tab@2x.jpg',
+    imageDesk: '/images/work/yogabloom-desk.jpg',
+    imageDesk2x: '/images/work/yogabloom-desk@2x.jpg',
+    alt: 'YogaBloom app',
+    href: 'https://example.com/yogabloom',
+    categories: ['frontend'],
+    group: true,
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Vite', iconId: 'icon-vite-logo-gold' },
+    ],
+  },
+  {
+    id: 'webstudio',
+    title: 'WebStudio',
+    image: '/images/work/webstudio-mobile.jpg',
+    image2x: '/images/work/webstudio-mobile@2x.jpg',
+    imageTab: '/images/work/webstudio-tab.jpg',
+    imageTab2x: '/images/work/webstudio-tab@2x.jpg',
+    imageDesk: '/images/work/webstudio-desk.jpg',
+    imageDesk2x: '/images/work/webstudio-desk@2x.jpg',
+    alt: 'WebStudio site',
+    href: 'https://example.com/webstudio',
+    categories: ['frontend'],
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+    ],
+  },
+];

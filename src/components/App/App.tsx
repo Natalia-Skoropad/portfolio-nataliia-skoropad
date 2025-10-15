@@ -1,7 +1,8 @@
-import { Header, Hero, Timeline } from '../../index';
+import { Header, Hero, Timeline, Works } from '../../index';
 import css from './App.module.css';
 
 import { TIMELINE } from '../../data/timeline';
+import { PROJECTS } from '../../data/projects';
 
 // ================================================================
 
@@ -13,14 +14,8 @@ function App() {
       <main>
         <Hero />
         <Timeline items={TIMELINE} />
+        <Works items={PROJECTS} />
 
-        <section
-          id="works"
-          className="container"
-          style={{ paddingBlock: '24px' }}
-        >
-          {/* Filters + Cards */}
-        </section>
         <section
           id="tools"
           className="container"

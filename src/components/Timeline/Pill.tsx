@@ -1,5 +1,6 @@
 import css from './Timeline.module.css';
-import spriteUrl from '../../assets/sprite.svg?url';
+
+import spriteUrl from '../../assets/sprite.svg';
 
 // ================================================================
 
