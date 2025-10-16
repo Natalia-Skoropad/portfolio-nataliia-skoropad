@@ -3,14 +3,14 @@ import css from './Logo.module.css';
 
 // ================================================================
 
-type LogoProps = {
+interface LogoProps {
   as?: 'a' | 'span';
   href?: string;
   ariaLabel?: string;
   onClick?: React.MouseEventHandler;
   className?: string;
   text?: string;
-};
+}
 
 // ================================================================
 

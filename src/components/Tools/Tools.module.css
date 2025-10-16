@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 144px);
+  justify-content: center;
+  column-gap: 16px;
+  row-gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(4, 158px);
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .grid {
+    grid-template-columns: repeat(6, 196px);
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  width: 144px;
+  height: 48px;
+  display: block;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (min-width: 720px) {
+  .badge {
+    width: 158px;
+    height: 53px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .badge {
+    width: 196px;
+    height: 66px;
+  }
+}

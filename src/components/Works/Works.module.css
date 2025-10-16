@@ -1,27 +1,4 @@
 /* ===== Section / heading / tabs ===== */
-.section {
-  padding-top: 100px;
-}
-
-.header {
-  margin-bottom: 30px;
-}
-
-.kicker {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
-.h2 {
-  font-size: 25px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  text-transform: uppercase;
-  text-shadow: 0 0 50px rgba(108, 99, 255, 0.3);
-}
 
 .tabs {
   display: flex;
@@ -50,16 +27,19 @@
 }
 
 /* ===== Grid ===== */
+
 .grid {
   display: grid;
   gap: 16px;
 }
+
 @media (min-width: 720px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
+
 @media (min-width: 1320px) {
   .grid {
     grid-template-columns: repeat(3, 416px);
@@ -69,6 +49,7 @@
 }
 
 /* ===== Card (shared) ===== */
+
 .card {
   position: relative;
   padding: 10px 10px 15px;
@@ -101,6 +82,7 @@
 }
 
 /* Bottom meta (shared) */
+
 .meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -111,6 +93,7 @@
 .metaCol {
   min-width: 0;
 }
+
 .right {
   text-align: right;
 }
@@ -123,6 +106,7 @@
   color: #f5f5f5;
   margin-bottom: 10px;
 }
+
 .right .metaLabel {
   color: #cbaf87;
   font-weight: 400;
@@ -139,6 +123,7 @@
   width: 20px;
   height: 20px;
 }
+
 .stack {
   display: flex;
   gap: 10px;
@@ -162,6 +147,7 @@
 }
 
 /* ===== Mobile ===== */
+
 @media (max-width: 719.98px) {
   .grid {
     grid-template-columns: 1fr;
@@ -180,6 +166,7 @@
 }
 
 /* ===== Tablet ===== */
+
 @media (min-width: 720px) and (max-width: 1319.98px) {
   .card {
     max-width: 340px;
@@ -193,16 +180,8 @@
 }
 
 /* ===== Desktop ===== */
+
 @media (min-width: 1320px) {
-  .kicker {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .h2 {
-    font-size: 40px;
-  }
-
   .card {
     width: 416px;
     height: 379px;
@@ -218,8 +197,8 @@
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px; /* відстань між кнопками */
-  margin-bottom: 20px; /* відстань до блоку з роботами */
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 /* Tab (inactive by default) */
@@ -235,7 +214,7 @@
   cursor: pointer;
 
   font-family: var(--font-family);
-  font-weight: 300; /* неактивна */
+  font-weight: 300;
   font-size: 16px;
   text-transform: capitalize;
   color: #6c63ff;
@@ -248,7 +227,7 @@
   background: rgba(108, 99, 255, 0.1);
 }
 
-/* Focus ring (на всяк) */
+/* Focus ring  */
 .tab:focus-visible {
   outline: 2px solid #6c63ff;
   outline-offset: 2px;
@@ -258,25 +237,23 @@
 .active {
   background: #6c63ff;
   color: #f5f5f5;
-  font-weight: 500; /* активна */
+  font-weight: 500;
 }
 
-/* ставимо орнамент у верхньому відступі секції */
 .section {
-  position: relative; /* база вже є; залишаємо */
-  padding-top: 100px; /* тут і живе ілюстрація */
+  position: relative;
+  padding-top: 100px;
 }
 
-/* орнамент між блоками */
 .section::before {
   content: '';
   position: absolute;
   left: 50%;
-  top: 60px; /* всередині верхнього padding */
+  top: 60px;
   transform: translateX(-50%);
-  width: 100px; /* mobile розмір */
+  width: 100px;
   aspect-ratio: 1 / 1;
-  pointer-events: none; /* щоб не заважав клікам по табах */
+  pointer-events: none;
   background: center/contain no-repeat;
   background-image: image-set(
     url('/images/Group.png') 1x,
@@ -285,7 +262,6 @@
   filter: drop-shadow(0 0 30px rgba(108, 99, 255, 0.35));
 }
 
-/* планшет */
 @media (min-width: 720px) {
   .section::before {
     width: 130px;
@@ -296,14 +272,12 @@
     );
   }
 
-  /* щоб заголовок і таби точно були над орнаментом */
   .header {
     position: relative;
     z-index: 1;
   }
 }
 
-/* десктоп */
 @media (min-width: 1320px) {
   .section::before {
     width: 180px;

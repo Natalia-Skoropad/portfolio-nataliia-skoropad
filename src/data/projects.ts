@@ -1,5 +1,7 @@
 import type { Project } from '../types/project';
 
+// ================================================================
+
 export const PROJECTS: Project[] = [
   {
     id: 'artistshub',
@@ -23,8 +25,6 @@ export const PROJECTS: Project[] = [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
-
-  // ... yogabloom, webstudio — аналогічно
   {
     id: 'yogabloom',
     title: 'YogaBloom',

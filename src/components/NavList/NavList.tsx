@@ -5,13 +5,13 @@ import css from './Nav.module.css';
 
 // ================================================================
 
-export interface NavItem {
+interface NavItem {
   id: string;
   label: string;
   href?: string;
 }
 
-export interface NavListProps {
+interface NavListProps {
   items: NavItem[];
   activeId?: string;
   onItemClick?: (id: string) => void;

@@ -1,4 +1,5 @@
-export type WorkCategory = 'frontend' | 'graphic' | 'uxui';
+export const WORK_CATEGORIES = ['frontend', 'graphic', 'uxui'] as const;
+export type WorkCategory = (typeof WORK_CATEGORIES)[number];
 
 export type StackItem = {
   label: string;
@@ -24,6 +25,6 @@ export type Project = {
   alt: string;
   href?: string;
   categories: WorkCategory[];
-  stack?: { label: string; iconId?: string }[];
+  stack?: StackItem[];
   group?: boolean;
 };

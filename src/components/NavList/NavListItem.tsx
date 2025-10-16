@@ -3,7 +3,7 @@ import css from './Nav.module.css';
 
 // ================================================================
 
-export interface NavListItemProps {
+interface NavListItemProps {
   id: string;
   label: string;
   href?: string;

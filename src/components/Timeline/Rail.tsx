@@ -3,7 +3,7 @@ import css from './Timeline.module.css';
 
 // ================================================================
 
-type Props = {
+interface Props {
   mode: 'mobile' | 'tablet' | 'desktop';
   height?: number;
   positions?: number[];
@@ -11,7 +11,7 @@ type Props = {
   gap?: number;
   count?: number;
   className?: string;
-};
+}
 
 // ================================================================
 
