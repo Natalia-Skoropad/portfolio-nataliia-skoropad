@@ -25,5 +25,4 @@ export const TOOLS: ToolItem[] = [
   },
   { id: 'indesign', label: 'InDesign', iconId: 'icon-indesign-logo-big' },
   { id: 'photoshop', label: 'Photoshop', iconId: 'icon-photoshop-logo-big' },
-  // { id: 'ga',          label: 'Analytics',   iconId: 'icon-google-analytics-logo-big' },
 ];

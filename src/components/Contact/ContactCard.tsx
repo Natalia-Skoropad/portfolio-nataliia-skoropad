@@ -1,6 +1,9 @@
 import React from 'react';
 import { SocialIcons } from '../../index';
-import css from './Contact-card.module.css';
+
+import css from './ContactCard.module.css';
+
+// ================================================================
 
 type ImgSet = {
   image: string;
@@ -17,6 +20,8 @@ interface Props extends ImgSet {
   city: string;
   email: string;
 }
+
+// ================================================================
 
 const ContactCard: React.FC<Props> = ({
   name,
@@ -59,50 +64,14 @@ const ContactCard: React.FC<Props> = ({
             {email}
           </a>
         </div>
-        <SocialIcons />
+
+        <div className={css.socialBlock}>
+          <p className={css.socialLabel}>Social Media:</p>
+          <SocialIcons />
+        </div>
       </div>
     </article>
   );
 };
 
 export default ContactCard;
-
-/*
-import React from 'react';
-import styles from './contact-card.module.css';
-import SocialIcons from '../SocialIcons/SocialIcons'; // за потреби підкоригуй шлях
-
-type Props = {
-  name: string;
-  city: string;
-  email: string;
-  imageSrc: string;
-  imageAlt?: string;
-};
-
-const ContactCard: React.FC<Props> = ({ city, email, imageSrc, imageAlt }) => {
-  return (
-    <article className={styles.card}>
-      <div className={styles.photoWrap}>
-        <img
-          className={styles.photo}
-          src={imageSrc}
-          alt={imageAlt ?? 'Contact photo'}
-        />
-        <div className={styles.orbs} aria-hidden />
-      </div>
-
-      <div className={styles.info}>
-        <p className={styles.city}>{city}</p>
-        <p className={styles.email}>{email}</p>
-      </div>
-
-      <div className={styles.social}>
-        <SocialIcons />
-      </div>
-    </article>
-  );
-};
-
-export default ContactCard;
-*/

@@ -1,0 +1,21 @@
+.ctaBtn {
+  margin-top: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+.ctaMobile {
+  margin-top: 30px;
+}

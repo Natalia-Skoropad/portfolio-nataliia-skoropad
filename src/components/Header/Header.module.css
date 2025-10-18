@@ -1,5 +1,3 @@
-/* ===== Base (mobile-first) ===================================== */
-
 .header {
   position: sticky;
   top: 0;
@@ -19,7 +17,6 @@
 .brand {
   display: inline-flex;
   align-items: center;
-  color: --accent;
 }
 
 .menuBtn {
@@ -33,7 +30,6 @@
 .iconSquare {
   width: 40px;
   height: 40px;
-
   transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -51,29 +47,10 @@
   display: none;
 }
 
-.offTop {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 135px;
-}
-
-.offNav {
-  margin-bottom: 135px;
-}
-
-.bottom {
-  margin-top: auto;
-}
-
-/* ===== Tablet ========================================= */
-
 @media (min-width: 720px) {
   .inner {
     justify-content: flex-start;
   }
-
   .menuBtn {
     display: none;
   }
@@ -90,47 +67,35 @@
 
   .hireBtn {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 158px;
-    height: 40px;
-    border-radius: 20px;
-
-    background: var(--accent);
-    color: var(--text);
-
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: capitalize;
-
-    border: none;
-    cursor: pointer;
-
-    transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .hireBtn:hover,
-  .hireBtn:focus {
-    box-shadow: var(--shadow-2);
+    min-width: 158px;
   }
 }
-
-/* ===== Desktop ====================================== */
 
 @media (min-width: 1320px) {
   .brand {
     margin-right: 354px;
   }
-
   .navInline {
     margin-right: 244px;
   }
 
   .hireBtn {
-    width: 196px;
-    height: 40px;
-    border-radius: 20px;
+    min-width: 196px;
   }
+}
+
+.offTop {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 135px;
+}
+
+.offNav {
+  margin-bottom: 135px;
+}
+
+.bottom {
+  margin-top: auto;
 }

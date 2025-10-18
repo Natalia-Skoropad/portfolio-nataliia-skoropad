@@ -28,7 +28,6 @@
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
-
   color: #f5f5f5;
   width: 100%;
   margin-bottom: 20px;
@@ -48,11 +47,14 @@
   padding-right: 20px;
 }
 
+.socialLabel {
+  display: none;
+}
+
 @media (min-width: 720px) {
   .root {
     width: 249px;
     height: 378px;
-
     padding: 12px 12px 20px;
   }
 
@@ -75,12 +77,60 @@
   .root {
     width: 636px;
     height: 437px;
-
-    padding: 10px 10px 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 24px;
   }
 
   .figureWrap {
+    flex: 0 0 406px;
     width: 406px;
     height: 417px;
+  }
+
+  .contacts {
+    position: relative;
+    flex: 0 0 196px;
+    padding: 196px 0px 0px;
+    border-radius: 20px;
+
+    background-image: url('/images/contacts/fon.png');
+    background-repeat: no-repeat;
+    background-size: 196px 181px;
+    background-position: left 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    width: 150px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .email {
+    display: inline-block;
+    width: 155px;
+
+    color: #f5f5f5;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+
+  .city {
+    margin-bottom: 10px;
+  }
+
+  .socialLabel {
+    display: inline-block;
+    margin: 0 0 20px;
+
+    font-size: 18px;
+    color: #f5f5f5;
+    width: 155px;
   }
 }

@@ -16,7 +16,7 @@ interface LogoProps {
 
 function Logo({
   as = 'a',
-  href = '#about',
+  href = '#hero',
   ariaLabel = 'Natalia — Home',
   onClick,
   className,

@@ -16,23 +16,41 @@
 .panel {
   position: fixed;
   inset: 0;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.panelDrawer {
   background: var(--bg);
   transform: translateX(100%);
   transition: transform 0.25s ease;
-  z-index: 1001;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   padding: 20px 0 24px;
 }
 
-.panel.open {
+.panelDrawer.open {
   transform: translateX(0);
+  pointer-events: auto;
 }
 
 @media (min-width: 720px) {
-  .panel,
-  .backdrop {
+  .panelDrawer,
+  .backdropDrawer {
     display: none;
   }
+}
+
+.panelModal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 12px;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.panelModal.open {
+  opacity: 1;
+  pointer-events: auto;
 }

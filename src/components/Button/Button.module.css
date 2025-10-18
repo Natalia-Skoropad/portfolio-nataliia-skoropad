@@ -1,7 +1,7 @@
 .button {
   font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: 500;
+  font-size: var(--fz-16);
+  font-weight: var(--fw-medium);
   line-height: 1.5;
   text-transform: capitalize;
 
@@ -10,11 +10,11 @@
   justify-content: center;
   gap: 8px;
 
-  height: 40px;
-  min-width: 144px;
+  height: var(--btn-h);
+  min-width: var(--btn-minw);
   padding: 14px 22px;
 
-  border-radius: 20px;
+  border-radius: var(--radius-20);
 
   transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
@@ -29,13 +29,12 @@
   box-shadow: var(--shadow-2);
 }
 
-.cancel {
-  background-color: #f8f9fa;
-  color: #212529;
-  border: 1px solid #ced4da;
+.tab {
+  background: var(--accent-10);
+  color: var(--accent);
 }
 
-.cancel:hover,
-.cancel:focus {
-  background-color: #e2e6ea;
+.tab:hover,
+.tab:focus {
+  box-shadow: var(--glow-accent-weak);
 }

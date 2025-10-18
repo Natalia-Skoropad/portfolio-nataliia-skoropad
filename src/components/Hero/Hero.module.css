@@ -43,7 +43,7 @@
   .grid {
     grid-template-columns: 1fr minmax(680px, 1.2fr) 1fr;
     align-items: start;
-    gap: 0px;
+    gap: 0;
   }
 }
 
@@ -53,14 +53,11 @@
   display: grid;
   place-items: center;
   text-align: center;
-
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
-
   max-width: 304px;
   min-height: 304px;
-
   background-image: url('/images/mobile-bg.png');
 }
 
@@ -88,7 +85,6 @@
   .orb {
     max-width: 700px;
     min-height: 850px;
-
     background-image: url('/images/desk-bg.png');
   }
 }
@@ -120,26 +116,23 @@
 }
 
 .title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: var(--fz-18);
+  font-weight: var(--fw-medium);
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-
   color: var(--accent);
   max-width: 190px;
   text-align: center;
-
   margin: 0 auto 10px;
-  text-shadow: 0 0 50px rgba(108, 99, 255, 0.3);
+  text-shadow: var(--glow-accent-weak);
 }
 
 .sub {
-  font-size: 15px;
-  font-weight: 300;
+  font-size: var(--fz-15);
+  font-weight: var(--fw-regular);
   line-height: 1.8;
   letter-spacing: 0.02em;
-
   color: var(--text);
   max-width: 250px;
   text-align: center;
@@ -147,11 +140,10 @@
 
 @media (min-width: 720px) {
   .title {
-    font-size: 30px;
+    font-size: var(--fz-30);
     max-width: 300px;
     margin: 0 auto 15px;
   }
-
   .sub {
     max-width: 600px;
   }
@@ -159,15 +151,14 @@
 
 @media (min-width: 1320px) {
   .title {
-    font-size: 50px;
+    font-size: var(--fz-50);
     max-width: 400px;
     margin: 0 auto 20px;
   }
-
   .sub {
     padding-right: 40px;
     padding-left: 40px;
-    font-size: 18px;
+    font-size: var(--fz-18);
   }
 }
 

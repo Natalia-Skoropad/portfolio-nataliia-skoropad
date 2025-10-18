@@ -29,7 +29,7 @@
   width: 306px;
   height: 246px;
   border-radius: 20px;
-  background: rgba(108, 99, 255, 0.05);
+  background: rgba(108, 99, 255, 0.1);
   padding: 10px 10px 15px;
   display: flex;
   flex-direction: column;

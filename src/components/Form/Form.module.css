@@ -1,0 +1,230 @@
+.root {
+  width: 100%;
+}
+.wrap {
+  position: relative;
+  overflow: visible;
+}
+
+.success {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  transform: translateY(-100%);
+  z-index: 2;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-16);
+  color: var(--gold);
+  pointer-events: none;
+  text-align: left;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(108, 99, 255, 0.1);
+  padding: 12px;
+  gap: 20px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-16);
+  text-transform: capitalize;
+  color: rgba(108, 99, 255, 0.5);
+}
+
+.field {
+  position: relative;
+}
+.fieldtext {
+  position: relative;
+  height: 165px;
+}
+
+.input:hover,
+.textarea:hover,
+.input:focus,
+.textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: none;
+}
+
+.inputError,
+.inputError:hover,
+.inputError:focus,
+.textareaError,
+.textareaError:hover,
+.textareaError:focus {
+  border-color: var(--danger);
+  outline: none;
+  box-shadow: none;
+}
+
+.errorBadge {
+  position: absolute;
+  left: 20px;
+  bottom: -9px;
+  border: 1px solid var(--danger);
+  border-radius: 20px;
+  height: 19px;
+  padding: 3px 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: var(--danger);
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 20px;
+  background: var(--accent);
+  color: var(--text);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-16);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  box-shadow: var(--shadow-2);
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .root {
+    width: 431px;
+  }
+
+  .form {
+    width: 431px;
+    height: 363px;
+  }
+
+  .input {
+    height: 40px;
+  }
+  .textarea {
+    height: 165px;
+    resize: none;
+  }
+}
+
+@media (min-width: 1320px) {
+  .root {
+    width: 636px;
+  }
+
+  .form {
+    width: 636px;
+    height: 435px;
+  }
+
+  .fieldtext {
+    height: 235px;
+  }
+  .textarea {
+    height: 235px;
+    resize: none;
+  }
+}
+
+.counter {
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-16);
+  text-transform: capitalize;
+  color: var(--gold);
+  pointer-events: none;
+}
+
+.textarea {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
+
+.textarea::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.textarea::-webkit-scrollbar-button,
+.textarea::-webkit-scrollbar-button:start:decrement,
+.textarea::-webkit-scrollbar-button:end:increment,
+.textarea::-webkit-scrollbar-button:single-button {
+  display: none;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 20px;
+  margin-block: 10px;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 20px;
+}
+
+.textarea:hover::-webkit-scrollbar-thumb,
+.textarea:focus::-webkit-scrollbar-thumb,
+.textarea::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+
+  overflow: auto;
+  resize: none;
+}
+
+.textarea::-webkit-resizer {
+  display: none;
+}
+
+@media (min-width: 1320px) {
+  .textarea::-webkit-scrollbar-track {
+    margin-block: 18px;
+  }
+  .textarea:hover {
+    scrollbar-color: var(--gold) var(--bg);
+  }
+}

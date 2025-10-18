@@ -1,0 +1,126 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.panel {
+  pointer-events: auto;
+  width: 304px;
+  height: 478px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background: var(--bg);
+  box-sizing: border-box;
+  padding: 20px;
+
+  margin-bottom: 24px;
+
+  margin-right: max(8px, calc((100vw - 320px) / 2 + 8px));
+}
+
+@media (min-width: 720px) {
+  .panel {
+    margin-right: max(0px, calc((100vw - 720px) / 2));
+  }
+}
+
+@media (min-width: 1320px) {
+  .panel {
+    margin-right: max(12px, calc((100vw - 1320px) / 2 + 12px));
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.list {
+  display: grid;
+  gap: 25px;
+  margin: 0 0 50px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.item:hover,
+.item:focus-visible {
+  color: var(--accent);
+  text-shadow: var(--glow-accent-strong, 0 0 50px rgba(108, 99, 255, 0.8));
+  outline: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.mail {
+  composes: text;
+  text-transform: none;
+  display: inline-block;
+  width: 190px;
+  white-space: normal;
+
+  overflow-wrap: break-word;
+
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.rule {
+  height: 1px;
+  border: none;
+  background: var(--accent);
+  box-shadow: 0 0 10px 0 rgba(108, 99, 255, 0.5);
+  margin: 0 0 30px;
+}
+
+.writeBtn {
+  width: 264px;
+}
+
+.emailItem {
+  position: relative;
+}
+
+.copiedNote {
+  position: absolute;
+  left: 60px;
+  top: calc(100% + 15px);
+
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: var(--gold);
+  pointer-events: none;
+}

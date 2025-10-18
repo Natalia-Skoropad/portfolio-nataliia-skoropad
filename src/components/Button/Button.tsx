@@ -7,10 +7,11 @@ import css from './Button.module.css';
 
 interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
-  variant?: 'normal' | 'cancel';
+  variant?: 'normal' | 'tab';
   text: string;
   type?: 'submit' | 'button';
 }
+
 // ================================================================
 
 function Button({
@@ -30,4 +31,5 @@ function Button({
     </button>
   );
 }
+
 export default Button;

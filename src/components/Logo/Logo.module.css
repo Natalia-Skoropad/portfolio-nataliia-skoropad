@@ -5,10 +5,9 @@
   text-decoration: none;
 
   font-family: var(--second-family);
-  font-weight: 400;
-  font-size: 40px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-40);
   text-transform: capitalize;
-  color: #d0cec1;
 
   flex: 0 0 auto;
   color: var(--accent);

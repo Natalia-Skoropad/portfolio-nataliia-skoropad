@@ -1,35 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { Section } from '../../index';
-import styles from './contact-section.module.css';
+import { useEffect, useState } from 'react';
+import { Section, Form, Button } from '../../index';
+
+import { openContactModal } from '../../utils/contactModal';
 import ContactCard from './ContactCard';
-import ContactForm from './ContactForm';
+
+import css from './ContactSection.module.css';
+
+// ================================================================
 
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
-
   useEffect(() => {
     if (typeof window === 'undefined' || !('matchMedia' in window)) return;
-
     const mql = window.matchMedia(query);
     const onChange = (e: MediaQueryListEvent) => setMatches(e.matches);
-
     setMatches(mql.matches);
-
     if ('addEventListener' in mql) {
       mql.addEventListener('change', onChange);
       return () => mql.removeEventListener('change', onChange);
     }
-
-    // @ts-expect-error: старий API підтримується в Safari
+    // @ts-expect-error Safari old API
     mql.addListener(onChange);
-    // @ts-expect-error: старий API підтримується в Safari
+    // @ts-expect-error Safari old API
     return () => mql.removeListener(onChange);
   }, [query]);
-
   return matches;
 }
 
-const ContactSection: React.FC = () => {
+// ================================================================
+
+function ContactSection() {
   const isMobile = useMediaQuery('(max-width: 767px)');
 
   return (
@@ -37,10 +37,10 @@ const ContactSection: React.FC = () => {
       id="contact"
       kicker="Contact Me"
       title="NATALIIA SKOROPAD"
-      className={styles.section}
+      className={css.section}
     >
-      <div className={styles.grid}>
-        <div className={styles.left}>
+      <div className={css.grid}>
+        <div className={css.left}>
           <ContactCard
             name="Natalia Skoropad"
             city="Odesa"
@@ -55,26 +55,19 @@ const ContactSection: React.FC = () => {
           />
 
           {isMobile && (
-            <button
-              type="button"
-              className={styles.ctaBtn}
-              onClick={() => {}}
-              aria-haspopup="dialog"
-              aria-controls="contact-form-modal"
-            >
-              Hire Me
-            </button>
+            <div className={css.ctaMobile}>
+              <Button text="Hire Me" onClick={openContactModal} />
+            </div>
           )}
         </div>
 
         {!isMobile && (
-          <div className={styles.right}>
-            <ContactForm />
+          <div className={css.right}>
+            <Form />
           </div>
         )}
       </div>
     </Section>
   );
-};
-
+}
 export default ContactSection;

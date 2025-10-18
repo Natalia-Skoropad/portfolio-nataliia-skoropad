@@ -1,0 +1,42 @@
+.wrap {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  z-index: 1500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.06s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  box-shadow: var(--shadow-2);
+  outline: none;
+}
+
+.icon {
+  width: 18px;
+  height: 10px;
+  display: block;
+}

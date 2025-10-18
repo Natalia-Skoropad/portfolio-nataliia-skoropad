@@ -1,10 +1,7 @@
-/* === Base / Mobile  ===================================== */
-
 .list {
   margin: 0;
   padding: 0;
   list-style: none;
-
   display: grid;
   gap: 40px;
 }
@@ -17,8 +14,8 @@
 
 .link {
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-20, 20px);
   text-transform: capitalize;
   color: var(--text);
   text-decoration: none;
@@ -29,32 +26,25 @@
 .link:focus-visible,
 .active {
   color: var(--accent);
-  text-shadow: 0 0 50px rgba(108, 99, 255, 0.8);
+  text-shadow: var(--glow-accent-strong);
 }
-
-/* === Tablet =========================================== */
 
 @media (min-width: 720px) {
   .link {
-    font-size: 16px;
+    font-size: var(--fz-16);
   }
-
   .inline {
     gap: 25px;
   }
-
   .inline > li > a {
     padding-block: 10px;
   }
 }
 
-/* === Desktop ========================================= */
-
 @media (min-width: 1320px) {
   .inline {
     gap: 50px;
   }
-
   .inline > li > a {
     padding-block: 20px;
   }

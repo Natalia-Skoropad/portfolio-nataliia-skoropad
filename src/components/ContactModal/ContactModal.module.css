@@ -1,0 +1,82 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 24px 8px;
+}
+
+@media (min-width: 720px) {
+  .overlay {
+    background: rgba(14, 14, 14, 0.8);
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.panel {
+  width: 304px;
+  height: 496px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: transparent;
+  padding: 12px 12px 0;
+}
+
+@media (min-width: 720px) {
+  .panel {
+    width: 471px;
+    height: 463px;
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    background: var(--bg);
+    padding: 16px 20px 12px;
+  }
+}
+
+@media (min-width: 1320px) {
+  .panel {
+    width: 676px;
+    height: 535px;
+    padding: 16px 20px 12px;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.successHead {
+  max-width: 220px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: var(--fz-16);
+  color: var(--gold);
+}
+
+.body {
+  margin-top: 30px;
+}
+
+@media (min-width: 720px) {
+  .body {
+    margin-top: 20px;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
