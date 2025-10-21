@@ -1,3 +1,4 @@
+/* Base */
 .list {
   margin: 0;
   padding: 0;
@@ -13,38 +14,34 @@
 }
 
 .link {
-  font-family: var(--font-family);
+  font-size: var(--fz-20);
   font-weight: var(--fw-regular);
-  font-size: var(--fz-20, 20px);
   text-transform: capitalize;
-  color: var(--text);
+  color: var(--basic-color-text);
   text-decoration: none;
-  transition: color 0.18s ease, text-shadow 0.18s ease;
 }
 
-.link:hover,
-.link:focus-visible,
-.active {
-  color: var(--accent);
-  text-shadow: var(--glow-accent-strong);
-}
-
-@media (min-width: 720px) {
+/* Tablet */
+@media only screen and (min-width: 720px) {
   .link {
     font-size: var(--fz-16);
   }
+
   .inline {
     gap: 25px;
   }
+
   .inline > li > a {
     padding-block: 10px;
   }
 }
 
-@media (min-width: 1320px) {
+/* Desktop */
+@media only screen and (min-width: 1320px) {
   .inline {
     gap: 50px;
   }
+
   .inline > li > a {
     padding-block: 20px;
   }

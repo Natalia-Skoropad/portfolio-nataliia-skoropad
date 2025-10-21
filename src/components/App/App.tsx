@@ -1,20 +1,20 @@
 import {
   Header,
   Hero,
-  Timeline,
+  About,
   Works,
   Tools,
   ContactSection,
   Footer,
-  ContactModal,
+  FormModal,
   StickyWidget,
   ContactsWidget,
 } from '../../index';
 
-import css from './App.module.css';
-
-import { TIMELINE } from '../../data/timeline';
+import { TIMELINE } from '../../data/about';
 import { PROJECTS } from '../../data/projects';
+
+import css from './App.module.css';
 
 // ================================================================
 
@@ -22,11 +22,11 @@ function App() {
   return (
     <div className={css.app}>
       <Header />
-      <ContactModal />
+      <FormModal />
+
       <main>
         <Hero />
-        <Timeline items={TIMELINE} />
-
+        <About items={TIMELINE} />
         <div id="timeline-end" aria-hidden="true" />
 
         <Works items={PROJECTS} />
@@ -34,9 +34,11 @@ function App() {
         <ContactSection />
         <Footer />
       </main>
+
       <StickyWidget footerSelector="#footer" />
       <ContactsWidget />
     </div>
   );
 }
+
 export default App;

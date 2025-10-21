@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { useState } from 'react';
 
 import { Logo, CloseButton, Button } from '../../index';
-import { openContactModal } from '../../utils/contactModal';
+import { openFormModal } from '../../utils/formModal';
 import { CONTACTS } from '../../utils/contactsLinks';
 
 import spriteHref from '../../assets/sprite.svg';
@@ -23,7 +23,7 @@ function ContactsModal({ open, onClose }: Props) {
 
   const writeToMe = () => {
     onClose();
-    openContactModal();
+    openFormModal();
   };
 
   const openWithFallback = (primary: string, fallback?: string) => {

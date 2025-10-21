@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { Project, WorkCategory } from '../../types/project';
-import WorkCard from './WorkCard';
-import Section from '../Section/Section';
 
-import clsx from 'clsx';
+import { Button, Section } from '../../index';
+import type { Project, WorkCategory } from '../../types/project';
+
+import WorkCard from './WorkCard';
 import css from './Works.module.css';
 
 // ================================================================
@@ -16,22 +16,22 @@ const LABEL: Record<WorkCategory, string> = {
   uxui: 'UX/UI Design',
 };
 
-interface Props {
+interface WorksProps {
   items: Project[];
   idAttr?: string;
 }
 
 // ================================================================
 
-function Works({ items, idAttr = 'works' }: Props) {
+function Works({ items, idAttr = 'works' }: WorksProps) {
   const categories = useMemo(
     () => ORDER.filter(c => items.some(p => p.categories.includes(c))),
     [items]
   );
 
-  const [filter, setFilter] = useState<WorkCategory>(() => {
-    return (categories[0] ?? 'frontend') as WorkCategory;
-  });
+  const [filter, setFilter] = useState<WorkCategory>(
+    () => (categories[0] ?? 'frontend') as WorkCategory
+  );
 
   useEffect(() => {
     if (!categories.includes(filter) && categories.length) {
@@ -47,29 +47,22 @@ function Works({ items, idAttr = 'works' }: Props) {
   const panelId = `${idAttr}-panel`;
 
   return (
-    <Section
-      id={idAttr}
-      kicker="My Works"
-      title="DEVELOPMENT & DESIGN"
-      headerAlign="left"
-      pad="lg"
-    >
+    <Section id={idAttr} kicker="My Works" title="DEVELOPMENT & DESIGN">
       <div className={css.tabs} role="tablist" aria-label="Works categories">
         {categories.map(c => {
+          const active = filter === c;
           const tabId = `${idAttr}-tab-${c}`;
           return (
-            <button
+            <Button
               key={c}
               id={tabId}
-              type="button"
               role="tab"
               aria-controls={panelId}
-              aria-selected={filter === c}
-              className={clsx(css.tab, filter === c && css.active)}
+              aria-selected={active}
+              variant={active ? 'normal' : 'tab'}
+              text={LABEL[c]}
               onClick={() => setFilter(c)}
-            >
-              {LABEL[c]}
-            </button>
+            />
           );
         })}
       </div>
@@ -77,19 +70,20 @@ function Works({ items, idAttr = 'works' }: Props) {
       {visible.length === 0 ? (
         <p className={css.empty}>No projects yet.</p>
       ) : (
-        <ul
+        <div
           id={panelId}
-          className={css.grid}
           role="tabpanel"
           aria-labelledby={`${idAttr}-tab-${filter}`}
           aria-label={`${LABEL[filter]} projects`}
         >
-          {visible.map(p => (
-            <li key={p.id}>
-              <WorkCard item={p} />
-            </li>
-          ))}
-        </ul>
+          <ul className={css.grid} role="list">
+            {visible.map(p => (
+              <li key={p.id}>
+                <WorkCard item={p} />
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </Section>
   );

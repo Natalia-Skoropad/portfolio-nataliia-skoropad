@@ -1,7 +1,7 @@
+/* Base */
 .wrap {
   position: fixed;
   right: 16px;
-
   bottom: 114px;
   z-index: 1600;
 }
@@ -15,17 +15,18 @@
   place-items: center;
   border: none;
   cursor: pointer;
-  transition: box-shadow 0.2s ease, transform 0.06s ease;
-}
-
-.btn:hover,
-.btn:focus-visible {
-  box-shadow: var(--shadow-1);
-  outline: none;
 }
 
 .icon {
   width: 24px;
   height: 20px;
   display: block;
+}
+
+/* Tablet */
+@media only screen and (min-width: 720px) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 1320px) {
 }

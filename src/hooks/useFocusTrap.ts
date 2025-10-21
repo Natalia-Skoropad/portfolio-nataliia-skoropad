@@ -39,4 +39,3 @@ export function useFocusTrap(
     };
   }, [active, onEscape, ref]);
 }
-

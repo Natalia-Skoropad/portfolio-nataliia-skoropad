@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { Logo, Form, CloseButton } from '../../index';
-import { subscribeContactModal } from '../../utils/contactModal';
+import { subscribeFormModal } from '../../utils/formModal';
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 
-import css from './ContactModal.module.css';
+import css from './FormModal.module.css';
 
 // ================================================================
 
@@ -14,12 +14,12 @@ const SUCCESS_LIFETIME = 10_000;
 
 // ================================================================
 
-function ContactModal() {
+function FormModal() {
   const [open, setOpen] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => subscribeContactModal(() => setOpen(true)), []);
+  useEffect(() => subscribeFormModal(() => setOpen(true)), []);
 
   useEffect(() => {
     if (!open) return;
@@ -29,11 +29,7 @@ function ContactModal() {
   }, [open]);
 
   useLockBodyScroll(open);
-  useFocusTrap(
-    { current: panelRef.current as unknown as HTMLElement },
-    open,
-    () => setOpen(false)
-  );
+  useFocusTrap(panelRef, open, () => setOpen(false));
 
   const onClose = () => {
     setOpen(false);
@@ -80,4 +76,4 @@ function ContactModal() {
   );
 }
 
-export default ContactModal;
+export default FormModal;

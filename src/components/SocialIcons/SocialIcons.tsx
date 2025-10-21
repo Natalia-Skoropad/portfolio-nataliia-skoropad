@@ -4,9 +4,9 @@ import css from './SocialIcons.module.css';
 // ================================================================
 
 const LINKS = {
-  linkedin: 'https://linkedin.com/',
-  github: 'https://github.com/',
-  behance: 'https://www.behance.net/',
+  linkedin: 'https://www.linkedin.com/in/nataliia-skoropad-37a4a4149/',
+  github: 'https://github.com/Natalia-Skoropad',
+  behance: 'https://www.behance.net/nataliiaskoropad',
 } as const;
 
 type Network = keyof typeof LINKS;
@@ -27,7 +27,7 @@ function SocialIcons() {
       {order.map(name => (
         <li key={name}>
           <a
-            className={css.link}
+            className={`${css.link} anim-button-gold`}
             href={LINKS[name]}
             target="_blank"
             rel="noreferrer noopener"

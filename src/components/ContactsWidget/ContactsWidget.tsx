@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import spriteHref from '../../assets/sprite.svg';
 import { ContactsModal } from '../../index';
+
+import spriteHref from '../../assets/sprite.svg';
 import css from './ContactsWidget.module.css';
 
-export default function ContactsWidget() {
+// ================================================================
+
+function ContactsWidget() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -11,7 +14,7 @@ export default function ContactsWidget() {
       <div className={css.wrap}>
         <button
           type="button"
-          className={css.btn}
+          className={`${css.btn} anim-button-gold`}
           aria-label="Open contacts"
           onClick={() => setOpen(true)}
         >
@@ -25,3 +28,5 @@ export default function ContactsWidget() {
     </>
   );
 }
+
+export default ContactsWidget;

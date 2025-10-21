@@ -1,31 +1,10 @@
-import { useEffect, useState } from 'react';
 import { Section, Form, Button } from '../../index';
 
-import { openContactModal } from '../../utils/contactModal';
+import { openFormModal } from '../../utils/formModal';
 import ContactCard from './ContactCard';
+import useMediaQuery from './useMediaQuery';
 
 import css from './ContactSection.module.css';
-
-// ================================================================
-
-function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('matchMedia' in window)) return;
-    const mql = window.matchMedia(query);
-    const onChange = (e: MediaQueryListEvent) => setMatches(e.matches);
-    setMatches(mql.matches);
-    if ('addEventListener' in mql) {
-      mql.addEventListener('change', onChange);
-      return () => mql.removeEventListener('change', onChange);
-    }
-    // @ts-expect-error Safari old API
-    mql.addListener(onChange);
-    // @ts-expect-error Safari old API
-    return () => mql.removeListener(onChange);
-  }, [query]);
-  return matches;
-}
 
 // ================================================================
 
@@ -34,7 +13,7 @@ function ContactSection() {
 
   return (
     <Section
-      id="contact"
+      id="contacts"
       kicker="Contact Me"
       title="NATALIIA SKOROPAD"
       className={css.section}
@@ -56,7 +35,7 @@ function ContactSection() {
 
           {isMobile && (
             <div className={css.ctaMobile}>
-              <Button text="Hire Me" onClick={openContactModal} />
+              <Button text="Hire Me" onClick={openFormModal} />
             </div>
           )}
         </div>
@@ -70,4 +49,5 @@ function ContactSection() {
     </Section>
   );
 }
+
 export default ContactSection;

@@ -1,6 +1,7 @@
 import { Button, Slideshow } from '../../index';
+
 import { HERO_PROJECT_SLIDES, HERO_TOOL_SLIDES } from '../../data/slides';
-import { openContactModal } from '../../utils/contactModal';
+import { openFormModal } from '../../utils/formModal';
 
 import css from './Hero.module.css';
 
@@ -33,11 +34,7 @@ function Hero() {
             </div>
 
             <div className={css.ctaMobile}>
-              <Button
-                text="Hire Me"
-                onClick={openContactModal}
-                variant="normal"
-              />
+              <Button text="Hire Me" onClick={openFormModal} variant="normal" />
             </div>
           </div>
 
@@ -55,4 +52,5 @@ function Hero() {
     </section>
   );
 }
+
 export default Hero;

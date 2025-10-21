@@ -22,21 +22,18 @@ function Logo({
   className,
   text = 'Natalia',
 }: LogoProps) {
+  const classes = clsx(css.logo, as === 'a' && css.link, className);
+
   if (as === 'span') {
     return (
-      <span className={clsx(css.logo, className)} onClick={onClick}>
+      <span className={classes} onClick={onClick}>
         {text}
       </span>
     );
   }
 
   return (
-    <a
-      href={href}
-      aria-label={ariaLabel}
-      className={clsx(css.logo, className)}
-      onClick={onClick}
-    >
+    <a href={href} aria-label={ariaLabel} className={classes} onClick={onClick}>
       {text}
     </a>
   );

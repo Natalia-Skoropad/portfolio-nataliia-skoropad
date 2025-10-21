@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import type { Slide } from '../../types/slide';
 import { useInterval } from '../../hooks/useInterval';
 
@@ -7,7 +8,7 @@ import css from './Slideshow.module.css';
 
 // ================================================================
 
-interface Props {
+interface SlideshowProps {
   items: Slide[];
   label: string;
   autoMs?: number;
@@ -20,10 +21,10 @@ interface Props {
 function Slideshow({
   items,
   label,
-  autoMs = 3000,
+  autoMs = 2000,
   className,
   variant = 'projects',
-}: Props) {
+}: SlideshowProps) {
   const [index, setIndex] = useState(0);
   const count = items.length;
 
@@ -31,6 +32,10 @@ function Slideshow({
 
   const go = (i: number) => setIndex(i);
   const slide = items[index];
+
+  const slideSrcSet = slide.src2x
+    ? `${slide.src} 1x, ${slide.src2x} 2x`
+    : undefined;
 
   return (
     <div className={clsx(css.wrap, className)}>
@@ -55,9 +60,7 @@ function Slideshow({
             <a href={slide.href} target="_blank" rel="noreferrer noopener">
               <img
                 src={slide.src}
-                srcSet={
-                  slide.src2x ? `${slide.src} 1x, ${slide.src2x} 2x` : undefined
-                }
+                srcSet={slideSrcSet}
                 alt={slide.alt}
                 className={css.image}
                 loading="lazy"
@@ -69,9 +72,7 @@ function Slideshow({
           ) : (
             <img
               src={slide.src}
-              srcSet={
-                slide.src2x ? `${slide.src} 1x, ${slide.src2x} 2x` : undefined
-              }
+              srcSet={slideSrcSet}
               alt={slide.alt}
               className={css.image}
               loading="lazy"

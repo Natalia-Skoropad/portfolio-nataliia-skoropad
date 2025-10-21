@@ -18,7 +18,7 @@ function CloseButton({ onClick, ariaLabel = 'Close' }: CloseButtonProps) {
       aria-label={ariaLabel}
       onClick={onClick}
     >
-      <svg className={css.iconSquare} aria-hidden="true">
+      <svg className={`${css.iconSquare} anim-icon-square`} aria-hidden="true">
         <use href={`${spriteHref}#icon-close-button`} />
       </svg>
     </button>

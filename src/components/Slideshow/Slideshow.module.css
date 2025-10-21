@@ -18,18 +18,17 @@
 }
 
 .label {
-  font-family: var(--font-family);
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-16);
   text-transform: capitalize;
-  color: #6c63ff;
+  color: var(--accent);
 }
 
 .card {
   width: 306px;
   height: 246px;
-  border-radius: 20px;
-  background: rgba(108, 99, 255, 0.1);
+  border-radius: var(--radius-20);
+  background: var(--accent-10);
   padding: 10px 10px 15px;
   display: flex;
   flex-direction: column;
@@ -46,18 +45,17 @@
   height: 186px;
   display: block;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: var(--radius-20);
 }
 
 .bottom {
   margin-top: 15px;
   height: 20px;
-
   padding: 0 20px;
   display: flex;
   align-items: center;
   gap: 15px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .dots {
@@ -68,9 +66,9 @@
 .dot {
   width: 20px;
   height: 20px;
-  border-radius: 25px;
+  border-radius: 20px;
   border: none;
-  background: #cbaf87;
+  background: var(--gold);
   flex: 0 0 auto;
 }
 
@@ -80,11 +78,11 @@
 
 .caption {
   font-family: var(--font-family);
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-16);
   text-transform: uppercase;
-  color: #cbaf87;
-  line-height: 1;
+  color: var(--gold);
+  line-height: 1.5;
 }
 
 .project .caption {

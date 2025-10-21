@@ -1,40 +1,34 @@
+/* Base */
 .button {
-  font-family: var(--font-family);
-  font-size: var(--fz-16);
-  font-weight: var(--fw-medium);
-  line-height: 1.5;
-  text-transform: capitalize;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  height: var(--btn-h);
-  min-width: var(--btn-minw);
+  height: var(--height-btn-40);
+  min-width: var(--min-width-btn-144);
   padding: 14px 22px;
+  border-radius: var(--border-radius-btn-20);
 
-  border-radius: var(--radius-20);
-
-  transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  font-size: var(--fz-btn-16);
+  font-weight: var(--fw-btn-500);
+  text-transform: capitalize;
 }
 
 .normal {
-  background: var(--accent);
-  color: var(--text);
-}
-
-.normal:hover,
-.normal:focus {
-  box-shadow: var(--shadow-2);
+  background: var(--color-btn-basic);
+  color: var(--text-btn-basic);
 }
 
 .tab {
-  background: var(--accent-10);
-  color: var(--accent);
+  background: var(--color-btn-tab);
+  color: var(--text-btn-tab);
 }
 
-.tab:hover,
-.tab:focus {
-  box-shadow: var(--glow-accent-weak);
+/* Tablet */
+@media only screen and (min-width: 720px) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 1320px) {
 }

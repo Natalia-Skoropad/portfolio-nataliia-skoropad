@@ -6,13 +6,13 @@ import css from './Works.module.css';
 
 // ================================================================
 
-interface Props {
+interface WorkCardProps {
   item: Project;
 }
 
 // ================================================================
 
-function WorkCard({ item }: Props) {
+function WorkCard({ item }: WorkCardProps) {
   const mSet = item.image2x
     ? `${item.image} 1x, ${item.image2x} 2x`
     : item.image;
@@ -25,7 +25,7 @@ function WorkCard({ item }: Props) {
   const leftLabel = item.group ? 'Group Project Name:' : 'Project Name:';
 
   return (
-    <article className={css.card}>
+    <article className={clsx(css.card, 'anim-card')}>
       {item.href && (
         <a
           className={css.cover}
@@ -70,8 +70,12 @@ function WorkCard({ item }: Props) {
                   width="20"
                   height="20"
                   aria-hidden="true"
+                  focusable="false"
                 >
-                  <use href={`${spriteUrl}#${s.iconId}`} />
+                  <use
+                    href={`${spriteUrl}#${s.iconId}`}
+                    xlinkHref={`${spriteUrl}#${s.iconId}`}
+                  />
                 </svg>
               ) : (
                 <span key={s.label} className={css.badge}>

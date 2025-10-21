@@ -1,0 +1,21 @@
+/* Base */
+.container {
+  max-width: 320px;
+  padding-inline: 8px;
+  margin-inline: auto;
+}
+
+/* Tablet */
+@media only screen and (min-width: 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1320px) {
+  .container {
+    max-width: 1320px;
+    padding-inline: 12px;
+  }
+}

@@ -1,13 +1,13 @@
-export type TimelineIcon = {
+export type AboutIcon = {
   id: string;
   label: string;
 };
 
-export type TimelineItem = {
+export type AboutItem = {
   id: string;
   eyebrow: string;
   title: string;
   text: string;
-  icons: TimelineIcon[];
+  icons: AboutIcon[];
   side?: 'left' | 'right';
 };

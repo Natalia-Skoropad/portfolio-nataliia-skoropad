@@ -16,5 +16,4 @@ export const NAV: { id: SectionId; label: string }[] = [
   { id: 'contacts', label: 'Contacts' },
 ];
 
-/** Меню без пункту "hero" */
 export const NAV_MENU = NAV.filter(item => item.id !== 'hero');

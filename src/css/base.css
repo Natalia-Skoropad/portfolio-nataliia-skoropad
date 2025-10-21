@@ -1,0 +1,126 @@
+/* =======================================
+   Base tokens & globals
+   ======================================= */
+
+:root {
+  /* Fonts */
+  --font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto,
+    sans-serif;
+  --second-family: 'Niconne', sans-serif;
+
+  /* ========== Button ========== */
+
+  /* Typography button */
+  --fz-btn-16: 16px;
+  --fw-btn-500: 500;
+  --text-btn-basic: #f5f5f5;
+  --text-btn-tab: #6c63ff;
+
+  /* Colors button */
+  --color-btn-basic: #6c63ff;
+  --color-btn-tab: rgba(108, 99, 255, 0.1);
+
+  /* Border-radius button */
+  --border-radius-btn-20: 20px;
+
+  /* Height button */
+  --height-btn-40: 40px;
+
+  /* Min-width button */
+  --min-width-btn-144: 144px;
+
+  /* ========== Typography ========== */
+  --fz-16: 16px;
+  --fz-18: 18px;
+  --fz-20: 20px;
+  --fz-30: 30px;
+  --fz-50: 50px;
+
+  --lh: 1.5;
+  --lh-sub-hero: 1.8;
+
+  --fz-logo: 40px;
+  --fz-h2-mobile: 25px;
+  --fz-h2-desk: 45px;
+  --fz-kicker-desk: 20px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  --ls-h1-02: 0.02em;
+  --ls-h2-06: 0.06em;
+
+  --basic-color-text: #f5f5f5;
+  --accent-color-text: #6c63ff;
+
+  --text-shadow-accent: 0 0 50px rgba(108, 99, 255, 0.4);
+
+  /* ==================== */
+
+  /* Typography scale */
+  --fz-11: 11px;
+  --fz-15: 15px;
+  --fz-25: 25px;
+  --fz-36: 36px;
+  --fz-45: 45px;
+  --fz-body: var(--fz-16);
+
+  /* Letter-spacings */
+
+  --ls-06: 0.06em;
+
+  /* Colors */
+  --bg: #0e0e0e;
+  --text: #f5f5f5;
+  --accent: #6c63ff;
+  --gold: #cbaf87;
+  --danger: #ff4d5a;
+
+  /* Alphas */
+  --accent-50: rgba(108, 99, 255, 0.5);
+  --accent-10: rgba(108, 99, 255, 0.1);
+
+  /* Radii / sizes */
+  --radius-8: 8px;
+  --radius-20: 20px;
+  --btn-h: 40px;
+  --btn-minw: 144px;
+
+  /* Borders */
+  --bw-1: 1px;
+  --border-accent-1: var(--bw-1) solid var(--accent);
+  --border-gold-1: var(--bw-1) solid var(--gold);
+  --border-danger-1: var(--bw-1) solid var(--danger);
+
+  /* Shadows (box-shadow) */
+  --shadow-1: 0 0 20px 0 rgba(203, 175, 135, 0.6);
+  --shadow-2: 0 0 20px 0 rgba(118, 99, 255, 0.6);
+
+  /* Text glows (text-shadow) */
+
+  --glow-accent-strong: 0 0 50px rgba(108, 99, 255, 0.8);
+}
+
+/* Base */
+html,
+body {
+  font-family: var(--font-family);
+  font-size: var(--fz-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh);
+  color: var(--text);
+  background: var(--bg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 50px;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}

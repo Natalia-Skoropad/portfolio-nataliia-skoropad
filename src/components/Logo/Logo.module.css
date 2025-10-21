@@ -1,3 +1,4 @@
+/* Base */
 .logo {
   display: inline-block;
   line-height: 1;
@@ -6,10 +7,25 @@
 
   font-family: var(--second-family);
   font-weight: var(--fw-regular);
-  font-size: var(--fz-40);
+  font-size: var(--fz-logo);
   text-transform: capitalize;
 
   flex: 0 0 auto;
-  color: var(--accent);
+  color: var(--accent-color-text);
+  padding-bottom: 12px;
+}
+
+.link {
   cursor: pointer;
+}
+
+/* Tablet */
+@media only screen and (min-width: 720px) {
+  .logo {
+    padding-bottom: 12px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1320px) {
 }

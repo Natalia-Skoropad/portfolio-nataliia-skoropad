@@ -13,19 +13,11 @@ interface OffcanvasProps {
   open: boolean;
   onClose: () => void;
   children: React.ReactNode;
-  variant?: 'drawer' | 'modal';
-  noContainer?: boolean;
 }
 
 // ================================================================
 
-function Offcanvas({
-  open,
-  onClose,
-  children,
-  variant = 'drawer',
-  noContainer,
-}: OffcanvasProps) {
+function Offcanvas({ open, onClose, children }: OffcanvasProps) {
   const panelRef = useRef<HTMLElement | null>(null);
   useLockBodyScroll(open);
 
@@ -41,11 +33,7 @@ function Offcanvas({
   const node = (
     <>
       <div
-        className={clsx(
-          css.backdrop,
-          variant === 'drawer' ? css.backdropDrawer : css.backdropModal,
-          open && css.open
-        )}
+        className={clsx(css.backdrop, open && css.open, 'anim-fade')}
         onClick={onClose}
         aria-hidden={!open}
       />
@@ -54,14 +42,15 @@ function Offcanvas({
         ref={panelRef}
         className={clsx(
           css.panel,
-          variant === 'drawer' ? css.panelDrawer : css.panelModal,
-          open && css.open
+          css.panelDrawer,
+          open && css.open,
+          'anim-offcanvas-drawer'
         )}
         role="dialog"
         aria-modal="true"
         aria-hidden={!open}
       >
-        {noContainer ? children : <div className="container">{children}</div>}
+        <div className="container">{children}</div>
       </aside>
     </>
   );

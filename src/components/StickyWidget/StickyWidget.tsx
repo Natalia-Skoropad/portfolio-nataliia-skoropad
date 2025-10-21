@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
-import spriteHref from '../../assets/sprite.svg';
-import { scrollToId } from '../../hooks/scrollToId';
+import { scrollToId } from '../../utils/scrollToId';
 import type { SectionId } from '../../data/nav';
+import spriteHref from '../../assets/sprite.svg';
 import css from './StickyWidget.module.css';
+
+// ================================================================
 
 type Props = {
   sentinelId?: string;
@@ -10,7 +12,9 @@ type Props = {
   footerSelector?: string;
 };
 
-export default function StickyWidget({
+// ================================================================
+
+function StickyWidget({
   sentinelId = 'timeline-end',
   targetId = 'hero',
   footerSelector = 'footer',
@@ -21,7 +25,6 @@ export default function StickyWidget({
     const startEl = document.getElementById(sentinelId);
     const footerEl =
       (document.querySelector(footerSelector) as HTMLElement | null) ?? null;
-
     if (!startEl) return;
 
     const docTop = (el: HTMLElement) =>
@@ -46,7 +49,6 @@ export default function StickyWidget({
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', recalc);
-
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', recalc);
@@ -57,7 +59,7 @@ export default function StickyWidget({
     <div className={`${css.wrap} ${visible ? css.visible : css.hidden}`}>
       <button
         type="button"
-        className={css.btn}
+        className={`${css.btn} anim-button`}
         aria-label="Back to Hero"
         onClick={() => scrollToId(targetId)}
       >
@@ -68,3 +70,5 @@ export default function StickyWidget({
     </div>
   );
 }
+
+export default StickyWidget;

@@ -1,6 +1,4 @@
-import React from 'react';
 import { SocialIcons } from '../../index';
-
 import css from './ContactCard.module.css';
 
 // ================================================================
@@ -15,7 +13,7 @@ type ImgSet = {
   alt: string;
 };
 
-interface Props extends ImgSet {
+interface ContactCardProps extends ImgSet {
   name: string;
   city: string;
   email: string;
@@ -23,7 +21,7 @@ interface Props extends ImgSet {
 
 // ================================================================
 
-const ContactCard: React.FC<Props> = ({
+function ContactCard({
   name,
   city,
   email,
@@ -34,7 +32,7 @@ const ContactCard: React.FC<Props> = ({
   imageDesk,
   imageDesk2x,
   alt,
-}) => {
+}: ContactCardProps) {
   const mSet = image2x ? `${image} 1x, ${image2x} 2x` : image;
   const tSet = imageTab2x ? `${imageTab} 1x, ${imageTab2x} 2x` : imageTab;
   const dSet = imageDesk2x ? `${imageDesk} 1x, ${imageDesk2x} 2x` : imageDesk;
@@ -72,6 +70,6 @@ const ContactCard: React.FC<Props> = ({
       </div>
     </article>
   );
-};
+}
 
 export default ContactCard;

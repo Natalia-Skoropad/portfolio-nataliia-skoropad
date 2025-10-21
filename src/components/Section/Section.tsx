@@ -3,56 +3,29 @@ import css from './Section.module.css';
 
 // ================================================================
 
-type Pad = 'sm' | 'md' | 'lg';
-type HeaderAlign = 'left' | 'center';
-
-type Props = {
+interface SectionProps {
   id: string;
   title: string;
   kicker?: string;
   children: React.ReactNode;
   className?: string;
-
-  pad?: Pad;
-  headerAlign?: HeaderAlign;
   divider?: boolean;
-  srOnlyTitle?: boolean;
-};
+}
 
 // ================================================================
 
-function Section({
-  id,
-  title,
-  kicker,
-  children,
-  className,
-  pad = 'md',
-  headerAlign = 'left',
-
-  srOnlyTitle = false,
-}: Props) {
+function Section({ id, title, kicker, children, className }: SectionProps) {
   const headingId = `${id}-heading`;
-  const padClass = { sm: css.padSm, md: css.padMd, lg: css.padLg }[pad];
 
   return (
     <section
       id={id}
-      className={clsx('container', css.section, padClass, className)}
+      className={clsx('container', css.section, className)}
       aria-labelledby={headingId}
     >
-      <header
-        className={clsx(
-          css.header,
-          headerAlign === 'center' && css.headerCenter
-        )}
-      >
+      <header className={css.header}>
         {kicker && <p className={css.kicker}>{kicker}</p>}
-
-        <h2
-          id={headingId}
-          className={clsx(css.h2, srOnlyTitle && 'visually-hidden')}
-        >
+        <h2 id={headingId} className={css.h2}>
           {title}
         </h2>
       </header>

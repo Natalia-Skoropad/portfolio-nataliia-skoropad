@@ -20,7 +20,7 @@ function NavListItem({ id, label, href, active, onClick }: NavListItemProps) {
     <li>
       <a
         href={to}
-        className={clsx(css.link, active && css.active)}
+        className={clsx(css.link, 'anim-link-glow', active && 'is-active-link')}
         aria-current={active ? 'page' : undefined}
         onClick={e => {
           if (to.startsWith('#')) e.preventDefault();

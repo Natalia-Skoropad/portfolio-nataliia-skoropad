@@ -1,10 +1,10 @@
-import type { TimelineItem as Item } from '../../types/timeline';
-
-import TimelineItem from './TimelineItem';
-import Rail from './Rail';
 import { Section } from '../../index';
+import type { AboutItem as Item } from '../../types/about';
 
-import css from './Timeline.module.css';
+import AboutItem from './AboutItem';
+import Rail from './Rail';
+
+import css from './About.module.css';
 
 // ================================================================
 
@@ -15,7 +15,7 @@ interface Props {
 
 // ================================================================
 
-function Timeline({ items, idAttr = 'about' }: Props) {
+function About({ items, idAttr = 'about' }: Props) {
   if (!items || items.length === 0) return null;
 
   return (
@@ -23,34 +23,35 @@ function Timeline({ items, idAttr = 'about' }: Props) {
       id={idAttr}
       kicker="About Me"
       title="MY IT CAREER PATH"
-      className={css.railHost}
-      headerAlign="left"
-      pad="lg"
+      className={`${css.root} ${css.railHost}`}
     >
       <Rail
         mode="mobile"
-        height={1600}
-        positions={[315, 577, 839, 1101, 1363, 1625]}
+        height={1570}
+        positions={[365, 627, 889, 1151, 1413, 1675]}
       />
 
       <ol className={css.list} aria-label="Career timeline">
         {items.map((item, i) => (
-          <TimelineItem key={item.id} item={item} index={i} />
+          <AboutItem key={item.id} item={item} index={i} />
         ))}
       </ol>
 
       <Rail
         mode="tablet"
-        height={1210}
-        positions={[465, 270, 855, 660, 1245, 1050]}
+        height={1225}
+        positions={[515, 320, 905, 710, 1280, 1100]}
       />
+
       <Rail
         mode="desktop"
-        height={1100}
-        positions={[192, 345, 498, 649, 801, 954]}
+        height={1080}
+        positions={[250, 405, 555, 710, 860, 1015]}
       />
+
+      <i className={css.bg} aria-hidden="true" />
     </Section>
   );
 }
 
-export default Timeline;
+export default About;

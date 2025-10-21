@@ -9,13 +9,7 @@ import ToolBadge from './ToolBadge';
 
 function Tools() {
   return (
-    <Section
-      id="tools"
-      kicker="My Toolbox"
-      title="DEV & DESIGN STACK"
-      headerAlign="left"
-      pad="lg"
-    >
+    <Section id="tools" kicker="My Toolbox" title="DEV & DESIGN STACK">
       <ul className={css.grid} aria-label="Toolbox">
         {TOOLS.map(tool => (
           <li key={tool.id} className={css.cell}>

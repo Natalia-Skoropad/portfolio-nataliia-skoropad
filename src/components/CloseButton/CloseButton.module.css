@@ -1,20 +1,21 @@
+/* Base */
 .menuBtn {
   padding: 0;
   background: transparent;
-  border: none;
+
   display: grid;
   place-items: center;
-  cursor: pointer;
 }
 
 .iconSquare {
   width: 40px;
   height: 40px;
-  transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-.iconSquare:hover,
-.iconSquare:focus-visible {
-  box-shadow: var(--shadow-1);
-  outline: none;
+/* Tablet */
+@media only screen and (min-width: 720px) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 1320px) {
 }

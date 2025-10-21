@@ -24,7 +24,7 @@ function Button({
   return (
     <button
       type={type}
-      className={clsx(css.button, css[variant], className)}
+      className={clsx(css.button, css[variant], 'anim-button', className)}
       {...rest}
     >
       {text}

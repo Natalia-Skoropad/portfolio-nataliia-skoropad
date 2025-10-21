@@ -1,8 +1,8 @@
-import type { TimelineItem as Item } from '../../types/timeline';
+import type { AboutItem as Item } from '../../types/about';
 import Pill from './Pill';
 
 import clsx from 'clsx';
-import css from './Timeline.module.css';
+import css from './About.module.css';
 
 // ================================================================
 
@@ -13,7 +13,7 @@ interface Props {
 
 // ================================================================
 
-function TimelineItem({ item, index }: Props) {
+function AboutItem({ item, index }: Props) {
   const side = item.side ?? (index % 2 === 0 ? 'left' : 'right');
 
   return (
@@ -58,4 +58,4 @@ function TimelineItem({ item, index }: Props) {
   );
 }
 
-export default TimelineItem;
+export default AboutItem;

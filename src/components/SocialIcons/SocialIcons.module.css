@@ -1,3 +1,4 @@
+/* Base */
 .list {
   margin: 0;
   padding: 0;
@@ -13,16 +14,14 @@
   width: 40px;
   height: 40px;
   line-height: 0;
-  transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-.link:hover,
-.link:focus-visible {
-  box-shadow: var(--shadow-1);
-  outline: none;
+/* Tablet */
+@media only screen and (min-width: 720px) {
 }
 
-@media (min-width: 1320px) {
+/* Desktop */
+@media only screen and (min-width: 1320px) {
   .list {
     gap: 28px;
   }

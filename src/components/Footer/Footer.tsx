@@ -1,6 +1,6 @@
 import { NavList, Logo } from '../../index';
 import { NAV_MENU } from '../../data/nav';
-import { scrollToId } from '../../hooks/scrollToId';
+import { scrollToId } from '../../utils/scrollToId';
 
 import clsx from 'clsx';
 import css from './Footer.module.css';
