@@ -30,10 +30,15 @@
   --min-width-btn-144: 144px;
 
   /* ========== Typography ========== */
+  --fz-11: 11px;
+  --fz-15: 15px;
   --fz-16: 16px;
   --fz-18: 18px;
   --fz-20: 20px;
+  --fz-25: 25px;
   --fz-30: 30px;
+  --fz-36: 36px;
+  --fz-45: 45px;
   --fz-50: 50px;
 
   --lh: 1.5;
@@ -58,15 +63,9 @@
   /* ==================== */
 
   /* Typography scale */
-  --fz-11: 11px;
-  --fz-15: 15px;
-  --fz-25: 25px;
-  --fz-36: 36px;
-  --fz-45: 45px;
   --fz-body: var(--fz-16);
 
   /* Letter-spacings */
-
   --ls-06: 0.06em;
 
   /* Colors */

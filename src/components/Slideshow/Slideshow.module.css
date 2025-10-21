@@ -19,7 +19,7 @@
 
 .label {
   font-weight: var(--fw-regular);
-  font-size: var(--fz-16);
+  font-size: var(--fz-18);
   text-transform: capitalize;
   color: var(--accent);
 }

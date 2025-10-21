@@ -79,3 +79,51 @@
 .is-active-link {
   color: var(--accent);
 }
+
+/* Sticky widget pulse (gold) */
+.anim-pulse-gold {
+  position: relative;
+  isolation: isolate;
+}
+
+.anim-pulse-gold::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  pointer-events: none;
+
+  box-shadow: 0 0 0 0 rgba(203, 175, 135, 0);
+  opacity: 0;
+
+  animation: pulse-gold-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-gold-ring {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(203, 175, 135, 0);
+    transform: scale(1);
+  }
+  10% {
+    opacity: 0.9;
+    box-shadow: 0 0 0 0 rgba(203, 175, 135, 0.75);
+  }
+  35% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 14px rgba(203, 175, 135, 0);
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(203, 175, 135, 0);
+    transform: scale(1);
+  }
+}
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .anim-pulse-gold::after {
+    animation: none;
+  }
+}

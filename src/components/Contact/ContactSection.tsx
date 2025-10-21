@@ -1,5 +1,4 @@
 import { Section, Form, Button } from '../../index';
-
 import { openFormModal } from '../../utils/formModal';
 import ContactCard from './ContactCard';
 import useMediaQuery from './useMediaQuery';
@@ -9,7 +8,7 @@ import css from './ContactSection.module.css';
 // ================================================================
 
 function ContactSection() {
-  const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery('(max-width: 719px)');
 
   return (
     <Section

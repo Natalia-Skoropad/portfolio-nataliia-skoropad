@@ -17,7 +17,7 @@
 
 .normal {
   background: var(--color-btn-basic);
-  color: var(--text-btn-basic);
+  color: white;
 }
 
 .tab {

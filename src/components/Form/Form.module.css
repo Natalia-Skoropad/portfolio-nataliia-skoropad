@@ -6,8 +6,8 @@
 .wrap {
   position: relative;
   overflow: visible;
-  height: 296px;
 }
+
 .success {
   position: absolute;
   left: 0;
@@ -18,7 +18,7 @@
   font-size: var(--fz-16);
   color: var(--gold);
   pointer-events: none;
-  text-align: left;
+  text-align: right;
 }
 
 .form {
@@ -28,28 +28,37 @@
   width: 100%;
   border-radius: var(--radius-20);
   background: var(--accent-10);
-  padding: 12px;
+  padding: 10px;
   gap: 20px;
-  height: 296px;
+  height: 496px;
 }
 
 .field {
   position: relative;
 }
+
 .fieldtext {
   position: relative;
-  height: 165px;
+  height: 296px;
 }
 
 .input,
 .textarea {
   width: 100%;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: var(--radius-20);
   border: var(--border-accent-1);
   background: var(--bg);
   color: var(--text);
   outline: none;
+}
+
+.input {
+  height: 40px;
+}
+
+.textarea {
+  height: 296px;
 }
 
 .input::placeholder,
@@ -65,7 +74,6 @@
 .input:focus,
 .textarea:focus {
   border-color: var(--gold);
-  box-shadow: none;
   outline: none;
 }
 
@@ -76,7 +84,6 @@
 .textareaError:hover,
 .textareaError:focus {
   border-color: var(--danger);
-  box-shadow: none;
   outline: none;
 }
 
@@ -85,7 +92,7 @@
   left: 20px;
   bottom: -9px;
   border: var(--border-danger-1);
-  border-radius: 20px;
+  border-radius: var(--radius-20);
   height: 19px;
   padding: 3px 20px;
   font-size: var(--fz-11);
@@ -93,19 +100,6 @@
   color: var(--danger);
   background: var(--bg);
   pointer-events: none;
-}
-
-.btn {
-  height: 40px;
-  border-radius: 20px;
-  background: var(--accent);
-  color: var(--text);
-  font-size: var(--fz-16);
-  border: none;
-  cursor: pointer;
-}
-.submitBtn {
-  width: 100%;
 }
 
 .counter {
@@ -124,30 +118,15 @@
   scrollbar-width: thin;
   scrollbar-color: var(--accent) var(--bg);
 }
-.textarea::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.textarea::-webkit-scrollbar-button,
-.textarea::-webkit-scrollbar-button:start:decrement,
-.textarea::-webkit-scrollbar-button:end:increment,
-.textarea::-webkit-scrollbar-button:single-button {
-  display: none;
-}
-.textarea::-webkit-scrollbar-track {
-  background: var(--bg);
-  border-radius: 20px;
-  margin-block: 10px;
-}
+
 .textarea::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-radius: 20px;
 }
-.textarea:hover::-webkit-scrollbar-thumb,
-.textarea:focus::-webkit-scrollbar-thumb,
+
 .textarea::-webkit-scrollbar-thumb:hover {
   background: var(--gold);
 }
+
 .textarea::-webkit-resizer {
   display: none;
 }
@@ -157,14 +136,17 @@
   .root {
     width: 431px;
   }
+
   .form {
     width: 431px;
-    height: 363px;
+    height: 365px;
   }
-  .input {
-    height: 40px;
-  }
+
   .textarea {
+    height: 165px;
+  }
+
+  .fieldtext {
     height: 165px;
   }
 }
@@ -174,16 +156,20 @@
   .root {
     width: 636px;
   }
+
   .form {
     width: 636px;
     height: 435px;
   }
+
   .fieldtext {
     height: 235px;
   }
+
   .textarea {
     height: 235px;
   }
+
   .textarea::-webkit-scrollbar-track {
     margin-block: 18px;
   }

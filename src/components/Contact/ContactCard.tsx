@@ -3,7 +3,7 @@ import css from './ContactCard.module.css';
 
 // ================================================================
 
-type ImgSet = {
+interface ImgSet {
   image: string;
   image2x?: string;
   imageTab?: string;
@@ -11,7 +11,7 @@ type ImgSet = {
   imageDesk?: string;
   imageDesk2x?: string;
   alt: string;
-};
+}
 
 interface ContactCardProps extends ImgSet {
   name: string;
@@ -55,12 +55,11 @@ function ContactCard({
           />
         </picture>
       </div>
+
       <div className={css.contacts}>
         <div className={css.info}>
           <p className={css.city}>{city}</p>
-          <a className={css.email} href={`mailto:${email}`}>
-            {email}
-          </a>
+          <p className={css.email}>{email}</p>
         </div>
 
         <div className={css.socialBlock}>

@@ -7,6 +7,7 @@
 }
 
 .btn {
+  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 35px;
@@ -15,12 +16,59 @@
   place-items: center;
   border: none;
   cursor: pointer;
+  isolation: isolate;
 }
 
 .icon {
   width: 24px;
   height: 20px;
   display: block;
+  z-index: 1;
+}
+
+.btn::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+
+  --wave: rgba(203, 175, 135, 0.35);
+  box-shadow: 0 0 0 0 var(--wave);
+  animation: widgetPulse 2.4s ease-out infinite;
+}
+
+.btn::after {
+  animation-delay: 1.2s;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  animation-duration: 1.8s;
+}
+
+@keyframes widgetPulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--wave);
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 16px rgba(203, 175, 135, 0.18);
+    opacity: 0.85;
+  }
+  100% {
+    box-shadow: 0 0 0 34px rgba(203, 175, 135, 0);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn::before,
+  .btn::after {
+    animation: none;
+  }
 }
 
 /* Tablet */

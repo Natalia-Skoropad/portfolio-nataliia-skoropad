@@ -8,8 +8,8 @@ import {
   useFormikContext,
   type FormikHelpers,
 } from 'formik';
-
 import * as Yup from 'yup';
+
 import { Button } from '../../index';
 import { loadDraft, saveDraft, clearDraft } from '../../utils/formDraft';
 
@@ -76,16 +76,29 @@ function ContactForm({ onSent, inlineSuccess = true }: ContactFormProps) {
     values: FormValues,
     helpers: FormikHelpers<FormValues>
   ) {
-    await new Promise(r => setTimeout(r, 700));
-    console.log('Contact form:', values);
+    try {
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
 
-    clearDraft();
-    helpers.resetForm({ values: initialValues });
-    helpers.setSubmitting(false);
+      if (!resp.ok) {
+        const data = await resp.json().catch(() => ({}));
+        throw new Error(data?.error || 'Failed to send');
+      }
 
-    setSent(true);
-    onSent?.();
-    setTimeout(() => setSent(false), 10_000);
+      clearDraft();
+      helpers.resetForm({ values: initialValues });
+      setSent(true);
+      onSent?.();
+      setTimeout(() => setSent(false), 10_000);
+    } catch (e) {
+      console.error(e);
+      // можеш показати toast/inline-ерор, якщо хочеш
+    } finally {
+      helpers.setSubmitting(false);
+    }
   }
 
   return (
@@ -173,7 +186,7 @@ function ContactForm({ onSent, inlineSuccess = true }: ContactFormProps) {
                   maxLength={LIMITS.message}
                   onChange={limitChange('message', LIMITS.message)}
                 />
-                <span className={`${css.counter} ${css.counterTextarea}`}>
+                <span className={css.counter}>
                   {values.message.length}/{LIMITS.message}
                 </span>
                 <ErrorMessage name="message">

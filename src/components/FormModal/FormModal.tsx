@@ -31,16 +31,15 @@ function FormModal() {
   useLockBodyScroll(open);
   useFocusTrap(panelRef, open, () => setOpen(false));
 
-  const onClose = () => {
+  function onClose() {
     setOpen(false);
     setShowSuccess(false);
-  };
+  }
 
-  const handleSent = () => {
+  function handleSent() {
     setShowSuccess(true);
-    const t = setTimeout(() => setShowSuccess(false), SUCCESS_LIFETIME);
-    return () => clearTimeout(t);
-  };
+    setTimeout(() => setShowSuccess(false), SUCCESS_LIFETIME);
+  }
 
   if (!open) return null;
 
@@ -67,9 +66,7 @@ function FormModal() {
           <CloseButton ariaLabel="Close modal" onClick={onClose} />
         </div>
 
-        <div className={css.body}>
-          <Form onSent={handleSent} inlineSuccess={false} />
-        </div>
+        <Form onSent={handleSent} inlineSuccess={false} />
       </div>
     </div>,
     document.body

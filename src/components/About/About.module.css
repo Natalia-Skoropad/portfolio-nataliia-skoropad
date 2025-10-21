@@ -172,10 +172,6 @@
 
 /* ========== Tablet (≥720px) ========== */
 @media (min-width: 720px) {
-  .root {
-    padding-bottom: 100px;
-  }
-
   .tOnly {
     display: block;
   }
@@ -284,14 +280,14 @@
   .list > li:nth-child(even) .icons {
     justify-content: flex-start;
   }
-  /*
+
   .bg {
     display: block;
     width: 69px;
     height: 103px;
     bottom: -85px;
     background-image: url('/images/about/bg-tab.png');
-  }*/
+  }
 }
 
 /* ========== Desktop (≥1320px) ========== */
@@ -376,11 +372,11 @@
     width: 20px;
     height: 20px;
   }
-  /*
+
   .bg {
     bottom: -100px;
     width: 109px;
     height: 151px;
     background-image: url('/images/about/bg-desk.png');
-  }*/
+  }
 }

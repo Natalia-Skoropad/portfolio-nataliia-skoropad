@@ -1,14 +1,16 @@
+/* Base */
 .root {
   box-sizing: border-box;
   width: 304px;
-  height: 440px;
-  border-radius: 20px;
-  background: rgba(108, 99, 255, 0.1);
-  padding: 10px 10px 20px;
+  height: 412px;
+  border-radius: var(--radius-20);
+  background: var(--accent-10);
+  padding: 10px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 10px;
 }
 
 .figureWrap {
@@ -20,68 +22,69 @@
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 20px;
   object-fit: cover;
+  border-radius: var(--radius-20);
 }
 
 .info {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: #f5f5f5;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-18);
+  color: var(--text);
 }
 
 .city {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .email {
-  color: #f5f5f5;
+  color: var(--text);
   text-decoration: none;
 }
 
 .contacts {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inline: 10px;
 }
 
 .socialLabel {
   display: none;
 }
 
-@media (min-width: 720px) {
+/* Tablet */
+@media only screen and (min-width: 720px) {
   .root {
     width: 249px;
-    height: 378px;
-    padding: 12px 12px 20px;
+    height: 365px;
   }
 
   .figureWrap {
-    width: 225px;
-    height: 215px;
-  }
-
-  .contacts {
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 229px;
+    height: 219px;
   }
 
   .info {
-    font-size: 14px;
+    font-size: var(--fz-15);
+    margin-bottom: 15px;
+  }
+
+  .city {
+    font-size: var(--fz-18);
   }
 }
 
-@media (min-width: 1320px) {
+/* Desktop */
+@media only screen and (min-width: 1320px) {
   .root {
     width: 636px;
     height: 437px;
     padding: 10px;
+
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    gap: 24px;
+    gap: 20px;
   }
 
   .figureWrap {
@@ -92,33 +95,33 @@
 
   .contacts {
     position: relative;
-    flex: 0 0 196px;
-    padding: 196px 0px 0px;
-    border-radius: 20px;
+    flex: 0 0 180px;
+    padding: 180px 0 0;
+    border-radius: var(--radius-20);
 
     background-image: url('/images/contacts/fon.png');
     background-repeat: no-repeat;
-    background-size: 196px 181px;
-    background-position: left 0px;
+    background-size: 180px 165px;
+    background-position: left 5px;
+
     display: flex;
     flex-direction: column;
   }
 
   .info {
     width: 150px;
-    margin-bottom: 30px;
-    font-size: 18px;
+    margin-bottom: 40px;
+    font-size: var(--fz-18);
   }
 
   .email {
     display: inline-block;
-    width: 155px;
-
-    color: #f5f5f5;
+    width: 160px;
+    color: var(--text);
     text-decoration: none;
 
     overflow-wrap: anywhere;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .city {
@@ -127,10 +130,10 @@
 
   .socialLabel {
     display: inline-block;
+    width: 150px;
     margin: 0 0 20px;
 
-    font-size: 18px;
-    color: #f5f5f5;
-    width: 155px;
+    font-size: var(--fz-18);
+    color: var(--text);
   }
 }

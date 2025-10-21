@@ -1,6 +1,7 @@
 /* Base */
 .section {
-  padding-block: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .header {
@@ -29,7 +30,8 @@
 /* Desktop */
 @media only screen and (min-width: 1320px) {
   .section {
-    padding-block: 75px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .header {
