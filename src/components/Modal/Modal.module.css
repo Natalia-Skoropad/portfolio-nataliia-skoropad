@@ -1,0 +1,168 @@
+/* =======================
+   TYPE: modal 
+======================== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 8px;
+}
+
+.modalPanel {
+  width: 304px;
+  height: 640px;
+  box-sizing: border-box;
+  border-radius: var(--radius-20);
+  background: transparent;
+}
+
+.modalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.modalBrand {
+  font-size: var(--fz-36);
+  line-height: 1;
+}
+
+.modalSuccessHead {
+  max-width: 220px;
+  font-size: var(--fz-16);
+  color: var(--gold);
+}
+
+.modalBody {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 720px) {
+  .modalOverlay {
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    align-items: center;
+    padding: 0;
+  }
+  .modalPanel {
+    width: 471px;
+    height: 465px;
+    border: var(--border-gold-1);
+    border-radius: var(--radius-20);
+    background: var(--bg);
+    padding: 20px;
+  }
+  .modalTop {
+    margin-bottom: 20px;
+  }
+  .modalBody {
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 1320px) {
+  .modalPanel {
+    width: 676px;
+    height: 535px;
+  }
+}
+
+/* =======================
+   TYPE: offcanvas 
+======================== */
+.offOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: opacity 0.25s ease;
+}
+
+.offOverlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.offPanel {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  pointer-events: none;
+  background: transparent;
+}
+
+.offDrawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--bg);
+
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 20px 0 24px;
+}
+
+.open .offDrawer {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 720px) {
+  .offOverlay,
+  .offPanel {
+    display: none;
+  }
+}
+
+/* =======================
+   TYPE: widget 
+======================== */
+.widgetOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.widgetPanel {
+  pointer-events: auto;
+  width: 304px;
+
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background: var(--bg);
+  box-sizing: border-box;
+  padding: 20px;
+
+  margin-bottom: 24px;
+  margin-right: max(8px, calc((100vw - 320px) / 2 + 8px));
+}
+@media (min-width: 720px) {
+  .widgetPanel {
+    margin-right: max(0px, calc((100vw - 720px) / 2));
+  }
+}
+@media (min-width: 1320px) {
+  .widgetPanel {
+    margin-right: max(12px, calc((100vw - 1320px) / 2 + 12px));
+  }
+}

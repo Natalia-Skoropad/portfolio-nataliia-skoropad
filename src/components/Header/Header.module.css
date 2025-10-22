@@ -45,6 +45,7 @@
   .inner {
     justify-content: flex-start;
   }
+
   .menuBtn {
     display: none;
   }
@@ -62,6 +63,7 @@
   .hireBtnWrap {
     display: inline-flex;
   }
+
   .hireBtn {
     min-width: 158px;
   }
@@ -72,9 +74,11 @@
   .brand {
     margin-right: 354px;
   }
+
   .navInline {
     margin-right: 244px;
   }
+
   .hireBtn {
     min-width: 196px;
   }
@@ -89,6 +93,7 @@
 }
 
 .offNav {
+  margin-top: 100px;
   margin-bottom: 135px;
 }
 

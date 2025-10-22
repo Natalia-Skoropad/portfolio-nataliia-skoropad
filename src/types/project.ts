@@ -13,6 +13,7 @@ export type Project = {
   // mobile
   image: string;
   image2x?: string;
+  imageBlur?: string;
 
   // tablet
   imageTab?: string;
@@ -28,3 +29,4 @@ export type Project = {
   stack?: StackItem[];
   group?: boolean;
 };
+

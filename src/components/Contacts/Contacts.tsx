@@ -1,13 +1,13 @@
 import { Section, Form, Button } from '../../index';
-import { openFormModal } from '../../utils/formModal';
+import { openModal } from '../../utils/modal';
 import ContactCard from './ContactCard';
 import useMediaQuery from './useMediaQuery';
 
-import css from './ContactSection.module.css';
+import css from './Contacts.module.css';
 
 // ================================================================
 
-function ContactSection() {
+function Contacts() {
   const isMobile = useMediaQuery('(max-width: 719px)');
 
   return (
@@ -34,7 +34,7 @@ function ContactSection() {
 
           {isMobile && (
             <div className={css.ctaMobile}>
-              <Button text="Hire Me" onClick={openFormModal} />
+              <Button text="Hire Me" onClick={openModal} />
             </div>
           )}
         </div>
@@ -49,4 +49,4 @@ function ContactSection() {
   );
 }
 
-export default ContactSection;
+export default Contacts;

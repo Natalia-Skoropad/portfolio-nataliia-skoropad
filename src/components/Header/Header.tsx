@@ -1,17 +1,10 @@
 import { useState } from 'react';
 
-import {
-  Offcanvas,
-  SocialIcons,
-  NavList,
-  Logo,
-  Button,
-  CloseButton,
-} from '../../index';
+import { SocialIcons, NavList, Logo, Button, Modal } from '../../index';
 
 import { NAV_MENU } from '../../data/nav';
 import { scrollToId } from '../../utils/scrollToId';
-import { openFormModal } from '../../utils/formModal';
+import { openModal } from '../../utils/modal';
 
 import spriteHref from '../../assets/sprite.svg';
 import clsx from 'clsx';
@@ -45,11 +38,7 @@ function Header() {
         </div>
 
         <div className={css.hireBtnWrap}>
-          <Button
-            text="Hire Me"
-            className={css.hireBtn}
-            onClick={openFormModal}
-          />
+          <Button text="Hire Me" className={css.hireBtn} onClick={openModal} />
         </div>
 
         <button
@@ -71,12 +60,7 @@ function Header() {
         </button>
       </div>
 
-      <Offcanvas open={open} onClose={() => setOpen(false)}>
-        <div className={css.offTop}>
-          <Logo as="span" className={css.brand} />
-          <CloseButton ariaLabel="Close menu" onClick={() => setOpen(false)} />
-        </div>
-
+      <Modal type="offcanvas" open={open} onClose={() => setOpen(false)}>
         <div className={css.offNav}>
           <NavList
             idAttr="mobile-menu"
@@ -92,7 +76,7 @@ function Header() {
         <div className={css.bottom}>
           <SocialIcons />
         </div>
-      </Offcanvas>
+      </Modal>
     </header>
   );
 }

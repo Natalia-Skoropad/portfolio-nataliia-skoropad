@@ -1,8 +1,9 @@
 import type { Project } from '../../types/project';
 import spriteUrl from '../../assets/sprite.svg';
 
+import LazyImage from '../LazyImage/LazyImage';
 import clsx from 'clsx';
-import css from './Works.module.css';
+import css from './Work.module.css';
 
 // ================================================================
 
@@ -22,6 +23,13 @@ function WorkCard({ item }: WorkCardProps) {
   const dSet = item.imageDesk2x
     ? `${item.imageDesk} 1x, ${item.imageDesk2x} 2x`
     : item.imageDesk;
+
+  const sources = [];
+  if (item.imageDesk)
+    sources.push({ media: '(min-width: 1320px)', srcSet: dSet! });
+  if (item.imageTab)
+    sources.push({ media: '(min-width: 720px)', srcSet: tSet! });
+
   const leftLabel = item.group ? 'Group Project Name:' : 'Project Name:';
 
   return (
@@ -37,20 +45,14 @@ function WorkCard({ item }: WorkCardProps) {
       )}
 
       <div className={css.figureWrap}>
-        <picture>
-          {item.imageDesk && (
-            <source media="(min-width: 1320px)" srcSet={dSet} />
-          )}
-          {item.imageTab && <source media="(min-width: 720px)" srcSet={tSet} />}
-          <img
-            className={css.image}
-            src={item.image}
-            srcSet={mSet}
-            alt={item.alt}
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
+        <LazyImage
+          className={css.image}
+          src={item.image}
+          srcSet={mSet}
+          alt={item.alt}
+          sources={sources}
+          placeholderSrc={item.imageBlur}
+        />
       </div>
 
       <div className={css.meta}>

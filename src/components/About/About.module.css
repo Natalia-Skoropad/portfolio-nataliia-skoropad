@@ -11,13 +11,16 @@
   position: relative;
   list-style: none;
 }
+
 .row {
   position: relative;
   z-index: 1;
 }
+
 .mOnly {
   display: block;
 }
+
 .tOnly {
   display: none;
 }
@@ -49,19 +52,23 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+
 .pillIcon {
   width: 20px;
   height: 20px;
   display: block;
 }
+
 .pillText {
   display: none;
 }
+
 .mOnly {
   margin-bottom: 15px;
 }
@@ -148,13 +155,16 @@
 .rail[data-mode='mobile'] {
   display: block;
 }
+
 .rail[data-mode='mobile'] .v {
   top: var(--top-mobile);
   left: 15px;
 }
+
 .rail[data-mode='mobile'] .dot {
   left: calc(15px - var(--dot) / 2);
 }
+
 .rail[data-mode='mobile'] .h {
   left: 15px;
 }
@@ -175,6 +185,7 @@
   .tOnly {
     display: block;
   }
+
   .mOnly {
     display: none;
   }
@@ -183,6 +194,7 @@
     padding-left: 0;
     row-gap: 40px;
   }
+
   .row {
     display: flex;
     align-items: flex-start;
@@ -194,6 +206,7 @@
   .cardCol {
     flex: 0 0 340px;
   }
+
   .labelCol {
     flex: 1 1 auto;
     display: flex;
@@ -204,6 +217,7 @@
   .item:nth-of-type(even) .row {
     flex-direction: row-reverse;
   }
+
   .item:nth-of-type(even) .labelCol {
     align-items: flex-start;
   }
@@ -213,6 +227,7 @@
     height: 155px;
     padding: 10px 13px;
   }
+
   .title {
     margin-bottom: 12px;
   }
@@ -226,6 +241,7 @@
     color: var(--accent);
     margin-bottom: 10px;
   }
+
   .item:nth-of-type(even) .labelTitle {
     text-align: left;
   }
@@ -238,20 +254,25 @@
   .rail[data-mode='mobile'] {
     display: none;
   }
+
   .rail[data-mode='tablet'] {
     display: block;
   }
+
   .rail[data-mode='tablet'] .v {
     top: var(--top-center);
     left: 50%;
     margin-left: -0.5px;
   }
+
   .rail[data-mode='tablet'] .dot {
     left: calc(50% - var(--dot) / 2);
   }
+
   .rail[data-mode='tablet'] .branch:nth-of-type(odd) .h {
     left: calc(50% + var(--dot) / 2);
   }
+
   .rail[data-mode='tablet'] .branch:nth-of-type(even) .h {
     right: calc(50% + var(--dot) / 2);
   }
@@ -259,24 +280,31 @@
   .list > li:nth-child(odd) .labelCol {
     grid-column: 1;
   }
+
   .list > li:nth-child(odd) .cardCol {
     grid-column: 2;
   }
+
   .list > li:nth-child(odd) .labelTitle {
     text-align: right;
   }
+
   .list > li:nth-child(odd) .icons {
     justify-content: flex-end;
   }
+
   .list > li:nth-child(even) .labelCol {
     grid-column: 2;
   }
+
   .list > li:nth-child(even) .cardCol {
     grid-column: 1;
   }
+
   .list > li:nth-child(even) .labelTitle {
     text-align: left;
   }
+
   .list > li:nth-child(even) .icons {
     justify-content: flex-start;
   }
@@ -297,6 +325,7 @@
     padding-left: 110px;
     padding-right: 110px;
   }
+
   .row {
     gap: 155px;
   }
@@ -304,9 +333,11 @@
   .item:nth-of-type(even) .row {
     flex-direction: row-reverse;
   }
+
   .item:nth-of-type(even) .labelCol {
     align-items: flex-start;
   }
+
   .item:nth-of-type(odd) .labelCol {
     align-items: flex-end;
   }
@@ -314,6 +345,7 @@
   .cardCol {
     flex: 0 0 506px;
   }
+
   .labelCol {
     flex: 1 1 auto;
     display: flex;
@@ -324,10 +356,12 @@
     width: 506px;
     height: 112px;
   }
+
   .title {
     margin: 0 0 10px;
     font-size: var(--fz-18);
   }
+
   .text {
     line-height: 1.5;
   }
@@ -338,6 +372,7 @@
     padding-top: 10px;
     text-align: right;
   }
+
   .item:nth-of-type(even) .labelTitle {
     text-align: left;
   }
@@ -345,22 +380,27 @@
   .rail[data-mode='tablet'] {
     display: none;
   }
+
   .rail[data-mode='desktop'] {
     display: block;
     --dot: 16px;
     --arm: 90px;
   }
+
   .rail[data-mode='desktop'] .v {
     top: 50px;
     left: 50%;
     margin-left: -0.5px;
   }
+
   .rail[data-mode='desktop'] .dot {
     left: calc(50% - var(--dot) / 2);
   }
+
   .rail[data-mode='desktop'] .branch:nth-of-type(odd) .h {
     right: calc(50% + var(--dot) / 2);
   }
+
   .rail[data-mode='desktop'] .branch:nth-of-type(even) .h {
     left: calc(50% + var(--dot) / 2);
   }
@@ -368,6 +408,7 @@
   .icons {
     gap: 20px;
   }
+
   .pillIcon {
     width: 20px;
     height: 20px;

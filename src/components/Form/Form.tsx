@@ -95,7 +95,6 @@ function ContactForm({ onSent, inlineSuccess = true }: ContactFormProps) {
       setTimeout(() => setSent(false), 10_000);
     } catch (e) {
       console.error(e);
-      // можеш показати toast/inline-ерор, якщо хочеш
     } finally {
       helpers.setSubmitting(false);
     }

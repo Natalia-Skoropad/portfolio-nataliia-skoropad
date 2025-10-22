@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { scrollToId } from '../../utils/scrollToId';
 import type { SectionId } from '../../data/nav';
+
 import spriteHref from '../../assets/sprite.svg';
-import css from './StickyWidget.module.css';
+import css from './ArrowWidget.module.css';
 
 // ================================================================
 
@@ -14,7 +15,7 @@ type Props = {
 
 // ================================================================
 
-function StickyWidget({
+function ArrowWidget({
   sentinelId = 'timeline-end',
   targetId = 'hero',
   footerSelector = 'footer',
@@ -71,4 +72,4 @@ function StickyWidget({
   );
 }
 
-export default StickyWidget;
+export default ArrowWidget;

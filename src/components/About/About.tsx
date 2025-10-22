@@ -5,6 +5,8 @@ import AboutItem from './AboutItem';
 import Rail from './Rail';
 
 import css from './About.module.css';
+import clsx from 'clsx';
+import sectionCss from '../Section/Section.module.css';
 
 // ================================================================
 
@@ -23,7 +25,7 @@ function About({ items, idAttr = 'about' }: Props) {
       id={idAttr}
       kicker="About Me"
       title="MY IT CAREER PATH"
-      className={`${css.root} ${css.railHost}`}
+      className={clsx(sectionCss.noTop, css.railHost)}
     >
       <Rail
         mode="mobile"
@@ -39,14 +41,14 @@ function About({ items, idAttr = 'about' }: Props) {
 
       <Rail
         mode="tablet"
-        height={1225}
-        positions={[515, 320, 905, 710, 1280, 1100]}
+        height={1180}
+        positions={[470, 275, 860, 665, 1235, 1055]}
       />
 
       <Rail
         mode="desktop"
-        height={1080}
-        positions={[250, 405, 555, 710, 860, 1015]}
+        height={1010}
+        positions={[175, 330, 480, 635, 785, 940]}
       />
 
       <i className={css.bg} aria-hidden="true" />

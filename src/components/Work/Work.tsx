@@ -4,7 +4,7 @@ import { Button, Section } from '../../index';
 import type { Project, WorkCategory } from '../../types/project';
 
 import WorkCard from './WorkCard';
-import css from './Works.module.css';
+import css from './Work.module.css';
 
 // ================================================================
 
@@ -23,7 +23,7 @@ interface WorksProps {
 
 // ================================================================
 
-function Works({ items, idAttr = 'works' }: WorksProps) {
+function Work({ items, idAttr = 'work' }: WorksProps) {
   const categories = useMemo(
     () => ORDER.filter(c => items.some(p => p.categories.includes(c))),
     [items]
@@ -47,8 +47,8 @@ function Works({ items, idAttr = 'works' }: WorksProps) {
   const panelId = `${idAttr}-panel`;
 
   return (
-    <Section id={idAttr} kicker="My Works" title="DEVELOPMENT & DESIGN">
-      <div className={css.tabs} role="tablist" aria-label="Works categories">
+    <Section id={idAttr} kicker="My Work" title="DEVELOPMENT & DESIGN">
+      <div className={css.tabs} role="tablist" aria-label="Work categories">
         {categories.map(c => {
           const active = filter === c;
           const tabId = `${idAttr}-tab-${c}`;
@@ -89,4 +89,4 @@ function Works({ items, idAttr = 'works' }: WorksProps) {
   );
 }
 
-export default Works;
+export default Work;
