@@ -21,7 +21,7 @@
   font-weight: var(--fw-regular);
   font-size: var(--fz-18);
   text-transform: capitalize;
-  color: var(--accent);
+  color: #5e55f0;
 }
 
 .card {

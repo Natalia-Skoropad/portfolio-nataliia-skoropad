@@ -260,7 +260,7 @@
   }
 
   .rail[data-mode='tablet'] .v {
-    top: var(--top-center);
+    top: 30px;
     left: 50%;
     margin-left: -0.5px;
   }
@@ -313,7 +313,7 @@
     display: block;
     width: 69px;
     height: 103px;
-    bottom: -85px;
+    bottom: -65px;
     background-image: url('/images/about/bg-tab.png');
   }
 }

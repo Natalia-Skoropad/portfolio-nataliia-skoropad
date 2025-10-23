@@ -16,13 +16,13 @@
 }
 
 .normal {
-  background: var(--color-btn-basic);
+  background: #5e55f0;
   color: white;
 }
 
 .tab {
   background: var(--color-btn-tab);
-  color: var(--text-btn-tab);
+  color: #5e55f0;
 }
 
 /* Tablet */

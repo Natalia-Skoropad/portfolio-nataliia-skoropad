@@ -41,8 +41,8 @@ function About({ items, idAttr = 'about' }: Props) {
 
       <Rail
         mode="tablet"
-        height={1180}
-        positions={[470, 275, 860, 665, 1235, 1055]}
+        height={1210}
+        positions={[80, 275, 470, 665, 860, 1055]}
       />
 
       <Rail
