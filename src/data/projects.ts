@@ -72,23 +72,70 @@ export const PROJECTS: Project[] = [
     title: 'Product Catalog Design',
     image: '/images/work/graphicDesign/product-catalog-design-mobile.jpg',
     image2x: '/images/work/graphicDesign/product-catalog-design-mobile@2x.jpg',
-    imageTab:
-      '/images/work/graphicDesign/product-catalog-design-mobile-tab.jpg',
-    imageTab2x:
-      '/images/work/graphicDesign/product-catalog-design-mobile-tab@2x.jpg',
-    imageDesk:
-      '/images/work/graphicDesign/product-catalog-design-mobile-desk.jpg',
+    imageTab: '/images/work/graphicDesign/product-catalog-design-tab.jpg',
+    imageTab2x: '/images/work/graphicDesign/product-catalog-design-tab@2x.jpg',
+    imageDesk: '/images/work/graphicDesign/product-catalog-design-desk.jpg',
     imageDesk2x:
-      '/images/work/graphicDesign/product-catalog-design-mobile-desk@2x.jpg',
+      '/images/work/graphicDesign/product-catalog-design-desk@2x.jpg',
     imageBlur: '',
     href: 'https://www.behance.net/gallery/185283883/Product-catalog-design',
     alt: 'Product catalog graphic design',
     categories: ['graphic'],
     stack: [
-      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
-      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
-      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
       { label: 'InDesign', iconId: 'icon-indesign-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+  {
+    id: 'product-catalog-design-hydropress',
+    title: 'Product Catalog Design',
+    image:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-mobile.jpg',
+    image2x:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-mobile@2x.jpg',
+    imageTab:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-tab.jpg',
+    imageTab2x:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-tab@2x.jpg',
+    imageDesk:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-desk.jpg',
+    imageDesk2x:
+      '/images/work/graphicDesign/product-catalog-design-hydropress-desk@2x.jpg',
+    imageBlur: '',
+    href: 'https://www.behance.net/gallery/116407671/Product-catalog',
+    alt: 'Product catalog graphic design Hydropress',
+    categories: ['graphic'],
+    stack: [
+      { label: 'InDesign', iconId: 'icon-indesign-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+  {
+    id: 'product-catalog-design-solar',
+    title: 'Product Catalog Design',
+    image: '/images/work/graphicDesign/product-catalog-design-solar-mobile.jpg',
+    image2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-mobile@2x.jpg',
+    imageTab: '/images/work/graphicDesign/product-catalog-design-solar-tab.jpg',
+    imageTab2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-tab@2x.jpg',
+    imageDesk:
+      '/images/work/graphicDesign/product-catalog-design-solar-desk.jpg',
+    imageDesk2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-desk@2x.jpg',
+    imageBlur: '',
+    href: 'https://www.behance.net/gallery/237530845/Product-catalog-design',
+    alt: 'Product catalog graphic design',
+    categories: ['graphic'],
+    stack: [
+      { label: 'InDesign', iconId: 'icon-indesign-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
 
