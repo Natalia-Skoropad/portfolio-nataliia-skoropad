@@ -221,7 +221,7 @@ export const PROJECTS: Project[] = [
     imageDesk2x: '/images/work/uxui/car-towing-website-design-desk@2x.jpg',
     href: 'https://fastfurioustowing.com/',
     imageBlur: '',
-    alt: 'Mobile website UX/UI design',
+    alt: 'Towing website UX/UI design',
     categories: ['uxui'],
     stack: [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
@@ -247,6 +247,25 @@ export const PROJECTS: Project[] = [
         label: 'Google Tag Manager',
         iconId: 'icon-google-tag-manager-small-logo-gold',
       },
+    ],
+  },
+
+  {
+    id: 'metinvest-website-redesign',
+    title: 'Metinvest Website Redesign',
+    image: '/images/work/uxui/metinvest-website-design-mobile.jpg',
+    image2x: '/images/work/uxui/metinvest-website-design-mobile@2x.jpg',
+    imageTab: '/images/work/uxui/metinvest-website-design-tab.jpg',
+    imageTab2x: '/images/work/uxui/metinvest-website-design-tab@2x.jpg',
+    imageDesk: '/images/work/uxui/metinvest-website-design-desk.jpg',
+    imageDesk2x: '/images/work/uxui/metinvest-website-design-desk@2x.jpg',
+    href: 'https://www.behance.net/gallery/123602751/UI-UX-website-design-Redesing',
+    imageBlur: '',
+    alt: 'Metinvest Website UX/UI redesign',
+    categories: ['uxui'],
+    stack: [
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
     ],
   },
 
