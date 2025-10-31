@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   // === Graphic Design ===
   {
     id: 'product-catalog-design',
-    title: 'Product Catalog Design',
+    title: 'Product Catalog Hydropress',
     image: '/images/work/graphicDesign/product-catalog-design-mobile.jpg',
     image2x: '/images/work/graphicDesign/product-catalog-design-mobile@2x.jpg',
     imageTab: '/images/work/graphicDesign/product-catalog-design-tab.jpg',
@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'product-catalog-design-hydropress',
-    title: 'Product Catalog Design',
+    title: 'Product Catalog Hydropress',
     image:
       '/images/work/graphicDesign/product-catalog-design-hydropress-mobile.jpg',
     image2x:
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'product-catalog-design-solar',
-    title: 'Product Catalog Design',
+    title: 'Product Catalog Helios Strategia',
     image: '/images/work/graphicDesign/product-catalog-design-solar-mobile.jpg',
     image2x:
       '/images/work/graphicDesign/product-catalog-design-solar-mobile@2x.jpg',
@@ -138,8 +138,118 @@ export const PROJECTS: Project[] = [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
+  {
+    id: 'product-catalog-design-solar-energy',
+    title: 'Product Catalog Helios Strategia',
+    image:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-mobile.jpg',
+    image2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-mobile@2x.jpg',
+    imageTab:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-tab.jpg',
+    imageTab2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-tab@2x.jpg',
+    imageDesk:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-desk.jpg',
+    imageDesk2x:
+      '/images/work/graphicDesign/product-catalog-design-solar-energy-desk@2x.jpg',
+    imageBlur: '',
+    href: 'https://www.behance.net/gallery/237575487/Product-catalog-design',
+    alt: 'Product catalog graphic design',
+    categories: ['graphic'],
+    stack: [
+      { label: 'InDesign', iconId: 'icon-indesign-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
+  {
+    id: 'social-media-design',
+    title: 'Social Media Design',
+    image: '/images/work/graphicDesign/social-media-design-mobile.jpg',
+    image2x: '/images/work/graphicDesign/social-media-design-mobile@2x.jpg',
+    imageTab: '/images/work/graphicDesign/social-media-design-tab.jpg',
+    imageTab2x: '/images/work/graphicDesign/social-media-design-tab@2x.jpg',
+    imageDesk: '/images/work/graphicDesign/social-media-design-desk.jpg',
+    imageDesk2x: '/images/work/graphicDesign/social-media-design-desk@2x.jpg',
+    imageBlur: '',
+    href: 'https://www.behance.net/gallery/143227127/Social-media',
+    alt: 'Social Media Design',
+    categories: ['graphic'],
+    stack: [
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+  {
+    id: 'presentation-on-internet-marketing',
+    title: 'Internet Marketing Presentation',
+    image:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-mobile.jpg',
+    image2x:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-mobile@2x.jpg',
+    imageTab:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-tab.jpg',
+    imageTab2x:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-tab@2x.jpg',
+    imageDesk:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-desk.jpg',
+    imageDesk2x:
+      '/images/work/graphicDesign/presentation-on-internet-marketing-desk@2x.jpg',
+    imageBlur: '',
+    href: 'https://www.behance.net/gallery/136008751/Marketing-Plan-Figma',
+    alt: 'Presentation on Internet Marketing',
+    categories: ['graphic'],
+    stack: [
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
 
   // === UX/UI Design ===
+  {
+    id: 'car-towing-website-design',
+    title: 'Fast & Furious Towing',
+    image: '/images/work/uxui/car-towing-website-design-mobile.jpg',
+    image2x: '/images/work/uxui/car-towing-website-design-mobile@2x.jpg',
+    imageTab: '/images/work/uxui/car-towing-website-design-tab.jpg',
+    imageTab2x: '/images/work/uxui/car-towing-website-design-tab@2x.jpg',
+    imageDesk: '/images/work/uxui/car-towing-website-design-desk.jpg',
+    imageDesk2x: '/images/work/uxui/car-towing-website-design-desk@2x.jpg',
+    href: 'https://fastfurioustowing.com/',
+    imageBlur: '',
+    alt: 'Mobile website UX/UI design',
+    categories: ['uxui'],
+    stack: [
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+      { label: 'Illustrator', iconId: 'icon-illustrator-logo-gold' },
+      { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
+      {
+        label: 'Google Analytics',
+        iconId: 'icon-google-analytics-small-logo-gold',
+      },
+      {
+        label: 'Google Ads',
+        iconId: 'icon-google-ads-small-logo-gold',
+      },
+      {
+        label: 'Meta Ads',
+        iconId: 'icon-meta-ads-small-logo-gold',
+      },
+      {
+        label: 'Google Adwords',
+        iconId: 'icon-google-adwords-small-logo-gold',
+      },
+      {
+        label: 'Google Tag Manager',
+        iconId: 'icon-google-tag-manager-small-logo-gold',
+      },
+    ],
+  },
+
   {
     id: 'phone-app-design',
     title: 'Phone App Design',
