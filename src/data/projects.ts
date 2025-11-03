@@ -3,6 +3,31 @@ import type { Project } from '../types/project';
 export const PROJECTS: Project[] = [
   // ===== Frontend =====
   {
+    id: 'frontend-developer-portfolio',
+    title: 'Frontend Developer Portfolio',
+    image: '/images/work/frontend/frontend-developer-portfolio-mobile.jpg',
+    image2x: '/images/work/frontend/frontend-developer-portfolio-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/frontend-developer-portfolio-tab.jpg',
+    imageTab2x: '/images/work/frontend/frontend-developer-portfolio-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/frontend-developer-portfolio-desk.jpg',
+    imageDesk2x:
+      '/images/work/frontend/frontend-developer-portfolio-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Frontend Developer Portfolio',
+    href: 'https://portfolio-nataliia-skoropad.vercel.app/',
+    categories: ['frontend'],
+    stack: [
+      { label: 'React', iconId: 'icon-react-small-logo-gold' },
+      { label: 'TS', iconId: 'icon-typescript-small-logo-gold' },
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Vite', iconId: 'icon-vite-logo-gold' },
+      { label: 'Axios', iconId: 'icon-axios-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+  {
     id: 'artistshub',
     title: 'ArtistsHub',
     image: '/images/work/frontend/artistshub-mobile.jpg',
@@ -211,6 +236,31 @@ export const PROJECTS: Project[] = [
 
   // === UX/UI Design ===
   {
+    id: 'frontend-developer-portfolio-uxui',
+    title: 'Frontend Developer Portfolio',
+    image: '/images/work/frontend/frontend-developer-portfolio-mobile.jpg',
+    image2x: '/images/work/frontend/frontend-developer-portfolio-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/frontend-developer-portfolio-tab.jpg',
+    imageTab2x: '/images/work/frontend/frontend-developer-portfolio-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/frontend-developer-portfolio-desk.jpg',
+    imageDesk2x:
+      '/images/work/frontend/frontend-developer-portfolio-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Frontend Developer Portfolio',
+    href: 'https://portfolio-nataliia-skoropad.vercel.app/',
+    categories: ['uxui'],
+    stack: [
+      { label: 'React', iconId: 'icon-react-small-logo-gold' },
+      { label: 'TS', iconId: 'icon-typescript-small-logo-gold' },
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Vite', iconId: 'icon-vite-logo-gold' },
+      { label: 'Axios', iconId: 'icon-axios-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+  {
     id: 'car-towing-website-design',
     title: 'Fast & Furious Towing',
     image: '/images/work/uxui/car-towing-website-design-mobile.jpg',
@@ -268,7 +318,7 @@ export const PROJECTS: Project[] = [
       { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
     ],
   },
-
+  /*
   {
     id: 'phone-app-design',
     title: 'Phone App Design',
@@ -288,4 +338,6 @@ export const PROJECTS: Project[] = [
       { label: 'Photoshop', iconId: 'icon-photoshop-logo-gold' },
     ],
   },
+
+  */
 ];

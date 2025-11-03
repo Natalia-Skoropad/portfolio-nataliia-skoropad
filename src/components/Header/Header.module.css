@@ -43,7 +43,7 @@
 /* Tablet */
 @media only screen and (min-width: 720px) {
   .inner {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .menuBtn {
