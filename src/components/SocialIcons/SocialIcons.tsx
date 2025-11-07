@@ -4,7 +4,7 @@ import css from './SocialIcons.module.css';
 // ================================================================
 
 const LINKS = {
-  linkedin: 'https://www.linkedin.com/in/nataliia-skoropad-37a4a4149/',
+  linkedin: 'https://www.linkedin.com/in/nataliia-skoropad/',
   github: 'https://github.com/Natalia-Skoropad',
   behance: 'https://www.behance.net/nataliiaskoropad',
 } as const;

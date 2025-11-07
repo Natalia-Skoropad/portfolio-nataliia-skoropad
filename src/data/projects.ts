@@ -69,6 +69,7 @@ export const PROJECTS: Project[] = [
       { label: 'CSS', iconId: 'icon-css-logo-gold' },
       { label: 'HTML', iconId: 'icon-html-logo-gold' },
       { label: 'Vite', iconId: 'icon-vite-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
   {
@@ -88,6 +89,7 @@ export const PROJECTS: Project[] = [
       { label: 'JS', iconId: 'icon-javascript-logo-gold' },
       { label: 'CSS', iconId: 'icon-css-logo-gold' },
       { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
 

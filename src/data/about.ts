@@ -22,7 +22,7 @@ export const TIMELINE: AboutItem[] = [
     id: 'ux-work-22-25',
     eyebrow: 'WORK 2022 – 2025',
     title: 'UX DESIGNER',
-    text: 'Worked as a UX Designer at SpaceLab, specializing in CRM systems, mobile applications, and corporate websites',
+    text: 'Worked as a UX Designer at Avada Media, specializing in CRM systems, mobile applications, and corporate websites',
     icons: [
       { id: 'icon-moqups-logo', label: 'Moqups' },
       { id: 'icon-figma-logo', label: 'Figma' },
@@ -62,7 +62,7 @@ export const TIMELINE: AboutItem[] = [
   },
   {
     id: 'design-2021',
-    eyebrow: '2021 COURSES',
+    eyebrow: '2020 – 2021 COURSES',
     title: 'UX/UI | GRAPHIC DESIGN',
     text: 'Completed a web design course, which sparked my interest in graphic design',
     icons: [
