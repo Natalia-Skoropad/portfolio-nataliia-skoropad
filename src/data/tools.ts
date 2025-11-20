@@ -3,6 +3,7 @@ import type { ToolItem } from '../types/tool';
 // ================================================================
 
 export const TOOLS: ToolItem[] = [
+  { id: 'nextjs', label: 'Nextjs', iconId: 'icon-nextjs-logo-big' },
   { id: 'react', label: 'React', iconId: 'icon-react-logo-big' },
   { id: 'ts', label: 'TypeScript', iconId: 'icon-typescript-logo-big' },
   { id: 'js', label: 'JavaScript', iconId: 'icon-javascript-logo-big' },
