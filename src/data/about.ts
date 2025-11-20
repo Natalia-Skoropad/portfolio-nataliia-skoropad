@@ -5,7 +5,7 @@ import type { AboutItem } from '../types/about';
 export const TIMELINE: AboutItem[] = [
   {
     id: 'fs-2025',
-    eyebrow: '2025-2026 COURSE',
+    eyebrow: '2025 – 2026 COURSE',
     title: 'FULL-STACK DEVELOPMENT',
     text: 'Acquired skills in modern web development, focusing on building responsive and interactive applications',
     icons: [
