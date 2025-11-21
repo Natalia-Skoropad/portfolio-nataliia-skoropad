@@ -9,6 +9,8 @@
   <li>List of my projects</li>
   <li>Contact form for sending messages</li>
   <li>Convenient contact widget</li>
+  <li>Optimized project images</li>
+  <li>Optimized the icon sprite</li>
 </ul>
 
 <h2>Technologies used</h2>
