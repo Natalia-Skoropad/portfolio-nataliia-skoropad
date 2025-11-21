@@ -5,10 +5,10 @@
 
 <h2>Implemented features</h2>
 <ul>
-  <li>section with my skills</li>
-  <li>list of my projects</li>
-  <li>contact form for sending messages</li>
-  <li>convenient contact widget</li>
+  <li>Section with my skills</li>
+  <li>List of my projects</li>
+  <li>Contact form for sending messages</li>
+  <li>Convenient contact widget</li>
 </ul>
 
 <h2>Technologies used</h2>
