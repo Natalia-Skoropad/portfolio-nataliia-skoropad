@@ -27,6 +27,7 @@ export const PROJECTS: Project[] = [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
+
   {
     id: 'easy-notes',
     title: 'EasyNotes',
@@ -51,6 +52,28 @@ export const PROJECTS: Project[] = [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
+
+  {
+    id: 'sweet-cheese-pancakes-recipe',
+    title: 'Pancakes Recipe Page',
+    image: '/images/work/frontend/pancakes-recipe-page-mobile.jpg',
+    image2x: '/images/work/frontend/pancakes-recipe-page-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/pancakes-recipe-page-tab.jpg',
+    imageTab2x: '/images/work/frontend/pancakes-recipe-page-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/pancakes-recipe-page-desk.jpg',
+    imageDesk2x: '/images/work/frontend/pancakes-recipe-page-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Sweet Cheese Pancakes',
+    href: 'https://natalia-skoropad.github.io/sweet_cheese_pancakes_recipe/',
+    categories: ['frontend'],
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
   {
     id: 'artistshub',
     title: 'ArtistsHub',
@@ -310,6 +333,28 @@ export const PROJECTS: Project[] = [
       { label: 'Figma', iconId: 'icon-figma-logo-gold' },
     ],
   },
+
+  {
+    id: 'sweet-cheese-pancakes-recipe-uxui',
+    title: 'Pancakes Recipe Page',
+    image: '/images/work/frontend/pancakes-recipe-page-mobile.jpg',
+    image2x: '/images/work/frontend/pancakes-recipe-page-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/pancakes-recipe-page-tab.jpg',
+    imageTab2x: '/images/work/frontend/pancakes-recipe-page-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/pancakes-recipe-page-desk.jpg',
+    imageDesk2x: '/images/work/frontend/pancakes-recipe-page-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Sweet Cheese Pancakes',
+    href: 'https://natalia-skoropad.github.io/sweet_cheese_pancakes_recipe/',
+    categories: ['uxui'],
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
   {
     id: 'car-towing-website-design',
     title: 'Fast & Furious Towing',
