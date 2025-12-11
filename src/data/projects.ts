@@ -75,6 +75,27 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'planet-fitness-studio',
+    title: 'Planet Fitness Studio',
+    image: '/images/work/frontend/planet-fitness-studio-mobile.jpg',
+    image2x: '/images/work/frontend/planet-fitness-studio-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/planet-fitness-studio-tab.jpg',
+    imageTab2x: '/images/work/frontend/planet-fitness-studio-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/planet-fitness-studio-desk.jpg',
+    imageDesk2x: '/images/work/frontend/planet-fitness-studio-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Planet Fitness Studio',
+    href: 'https://natalia-skoropad.github.io/planet_fitness_studio/',
+    categories: ['frontend'],
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
+  {
     id: 'artistshub',
     title: 'ArtistsHub',
     image: '/images/work/frontend/artistshub-mobile.jpg',
@@ -346,6 +367,27 @@ export const PROJECTS: Project[] = [
     imageBlur: '',
     alt: 'Sweet Cheese Pancakes',
     href: 'https://natalia-skoropad.github.io/sweet_cheese_pancakes_recipe/',
+    categories: ['uxui'],
+    stack: [
+      { label: 'JS', iconId: 'icon-javascript-logo-gold' },
+      { label: 'CSS', iconId: 'icon-css-logo-gold' },
+      { label: 'HTML', iconId: 'icon-html-logo-gold' },
+      { label: 'Figma', iconId: 'icon-figma-logo-gold' },
+    ],
+  },
+
+  {
+    id: 'planet-fitness-studio-uxui',
+    title: 'Planet Fitness Studio',
+    image: '/images/work/frontend/planet-fitness-studio-mobile.jpg',
+    image2x: '/images/work/frontend/planet-fitness-studio-mobile@2x.jpg',
+    imageTab: '/images/work/frontend/planet-fitness-studio-tab.jpg',
+    imageTab2x: '/images/work/frontend/planet-fitness-studio-tab@2x.jpg',
+    imageDesk: '/images/work/frontend/planet-fitness-studio-desk.jpg',
+    imageDesk2x: '/images/work/frontend/planet-fitness-studio-desk@2x.jpg',
+    imageBlur: '',
+    alt: 'Planet Fitness Studio',
+    href: 'https://natalia-skoropad.github.io/planet_fitness_studio/',
     categories: ['uxui'],
     stack: [
       { label: 'JS', iconId: 'icon-javascript-logo-gold' },

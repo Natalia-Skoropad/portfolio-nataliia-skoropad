@@ -4,55 +4,57 @@
 
 /* Buttons (accent) */
 .anim-button {
-  transition: transform 0.06s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .anim-button:hover,
 .anim-button:focus-visible {
   box-shadow: var(--shadow-2);
-  outline: none;
+  transform: translateY(-2px);
 }
 
 /* Buttons/icons with gold glow (social, contacts) */
 .anim-button-gold {
-  transition: transform 0.06s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .anim-button-gold:hover,
 .anim-button-gold:focus-visible {
   box-shadow: var(--shadow-1);
-  outline: none;
+  transform: translateY(-2px);
 }
 
 /* 40×40 square icons */
 .anim-icon-square {
-  transition: transform 0.06s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .anim-icon-square:hover,
 .anim-icon-square:focus-visible {
   box-shadow: var(--shadow-1);
-  outline: none;
+  transform: translateY(-2px);
 }
 
 /* Cards hover (works etc.) */
 .anim-card {
-  transition: transform 0.06s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .anim-card:hover,
 .anim-card:focus {
-  box-shadow: 0 0 20px 0 rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 20px 0 rgba(108, 99, 255, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Link glow (navigation) */
 .anim-link-glow {
-  transition: color 0.18s ease, text-shadow 0.18s ease;
+  transition: transform 150ms ease, color 150ms ease, text-shadow 150ms ease;
 }
 
 .anim-link-glow:hover,
 .anim-link-glow:focus-visible {
   text-shadow: var(--glow-accent-strong);
+  transform: translateY(-2px);
 }
 
 /* Backdrop fade (offcanvas/modal) */
